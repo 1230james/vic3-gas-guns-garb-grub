@@ -1,0 +1,12 @@
+{
+    "name" : "Gas, Guns, Garb, and Grub",
+    "id" : "",
+    "version" : "1.0.0",
+    "supported_game_version" : "1.2.*",
+    "short_description" : "",
+    "tags" : [],
+    "relationships" : [],
+    "game_custom_data" : {
+        "multiplayer_synchronized" : true
+    }
+}
