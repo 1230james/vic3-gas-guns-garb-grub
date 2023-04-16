@@ -1,0 +1,4 @@
+﻿# If Adopt Western Clothes is installed, this trigger definition *should* be overwritten by AWC.
+snori_character_westernize_trigger = {
+	exists = scope:character
+}
