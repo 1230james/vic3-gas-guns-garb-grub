@@ -1,0 +1,25 @@
+﻿l_english:
+    # Production method groups
+    pmg_GGGG_guns:0     "Infantry Equipment"
+    pmg_GGGG_rations:0  "Rations"
+    pmg_GGGG_uniforms:0 "Uniforms"
+    
+    # Gun PMs
+    pm_GGGG_melee:0        "Primitive Weapons"
+    pm_GGGG_flintlocks:0   "$pm_muskets$"
+    pm_GGGG_caplocks:0     "$pm_rifles$"
+    pm_GGGG_repeaters:0    "$pm_repeaters$"
+    pm_GGGG_bolt_actions:0 "$pm_bolt_action_rifles$"
+    
+    # Rations PMs
+    pm_GGGG_foraged_rations:0      "Local Foraging"
+    pm_GGGG_bread_meat_rations:0   "Hardtack & Salt Pork"
+    pm_GGGG_canned_rations:0       "Canned Goods"
+    pm_GGGG_refrigerated_rations:0 "Refrigerated Produce"
+    
+    # Uniforms PMs
+    pm_GGGG_no_uniforms:0          "No Uniforms"
+    pm_GGGG_traditional_uniforms:0 "Traditional Garb"
+    pm_GGGG_regimental_colors:0    "Regimental Dress"
+    pm_GGGG_modern_uniform:0       "Helmets & Drab"
+    

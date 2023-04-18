@@ -1,5 +1,6 @@
 ﻿pm_GGGG_foraged_rations = {
-	texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
+	texture   = "gfx/interface/icons/production_method_icons/no_canning.dds"
+    ai_weight = 0.5
     
 	building_modifiers = {
         unscaled = {

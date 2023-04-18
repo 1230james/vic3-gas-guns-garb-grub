@@ -1,5 +1,6 @@
 ﻿pm_GGGG_no_uniforms = {
-	texture = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
+	texture   = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
+    ai_weight = 0.5
     
 	country_modifiers = {
         unscaled = {
@@ -57,8 +58,9 @@ pm_GGGG_regimental_colors = {
 }
 
 pm_GGGG_modern_uniform = {
-    texture = "gfx/interface/icons/production_method_icons/unused/refining4.dds"
+    texture    = "gfx/interface/icons/production_method_icons/unused/refining4.dds"
 	is_default = yes
+    ai_weight  = 1.5
     
     unlocking_technologies = {
         trench_works
