@@ -1,10 +1,6 @@
 ﻿pm_GGGG_melee = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/pre_guns.dds"
 	is_default = yes
-
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
 }
 
 pm_GGGG_flintlocks = {

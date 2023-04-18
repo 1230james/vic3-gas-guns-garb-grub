@@ -1,0 +1,91 @@
+﻿pm_GGGG_foraged_rations = {
+	texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
+    
+	building_modifiers = {
+        unscaled = {
+            unit_devastation_mult     = 0.05
+            unit_morale_loss_mult     = 0.10
+            unit_recovery_rate_add    = -0.10
+            unit_morale_recovery_mult = -0.10
+		}
+	}
+}
+
+pm_GGGG_bread_meat_rations = {
+	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
+	is_default = yes
+    
+    unlocking_technologies = {
+	}
+    
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_grain_add = 0.6
+            building_input_meat_add  = 0.4
+		}
+
+		throughput_scaled = {
+		}
+        
+        unscaled = {
+		}
+	}
+    
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}
+
+pm_GGGG_canned_rations = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	is_default = yes
+    
+    unlocking_technologies = {
+        canneries
+	}
+    
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_groceries_add = 1
+		}
+
+		throughput_scaled = {
+		}
+        
+        unscaled = {
+		}
+	}
+    
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}
+
+pm_GGGG_refrigerated_rations = {
+    texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
+	is_default = yes
+    
+    unlocking_technologies = {
+        pasteurization
+	}
+    
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_groceries_add = 0.5
+            building_input_fruit_add     = 0.25
+            building_input_meat_add      = 0.25
+		}
+
+		throughput_scaled = {
+		}
+        
+        unscaled = {
+            unit_morale_recovery_mult = 0.10
+            unit_recovery_rate_add    = 0.10
+		}
+	}
+    
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}

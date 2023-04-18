@@ -1,25 +1,36 @@
 ﻿pmg_GGGG_guns = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		pm_GGGG_melee
-		pm_GGGG_flintlocks
-		pm_GGGG_caplocks
-		pm_GGGG_repeaters
-		pm_GGGG_bolt_actions
-	}
+    production_methods = {
+        pm_GGGG_melee
+        pm_GGGG_flintlocks
+        pm_GGGG_caplocks
+        pm_GGGG_repeaters
+        pm_GGGG_bolt_actions
+    }
 }
 
-pmg_GGGG_guns_conscription = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+pmg_GGGG_rations = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    ai_selection = most_productive
+    
+    production_methods = {
+        pm_GGGG_foraged_rations
+        pm_GGGG_bread_meat_rations
+        pm_GGGG_canned_rations
+        pm_GGGG_refrigerated_rations
+    }
+}
 
-	production_methods = {
-		pm_GGGG_melee_conscription
-		pm_GGGG_flintlocks_conscription
-		pm_GGGG_caplocks_conscription
-		pm_GGGG_repeaters_conscription
-		pm_GGGG_bolt_actions_conscription
-	}
+pmg_GGGG_uniforms = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    ai_selection = most_productive
+    
+    production_methods = {
+        pm_GGGG_no_uniforms
+        pm_GGGG_traditional_uniforms
+        pm_GGGG_regimental_colors
+        pm_GGGG_modern_uniform
+    }
 }
