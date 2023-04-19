@@ -30,7 +30,31 @@ pmg_GGGG_uniforms = {
     production_methods = {
         pm_GGGG_no_uniforms
         pm_GGGG_traditional_uniforms
-        pm_GGGG_regimental_colors
+        pm_GGGG_full_dress
         pm_GGGG_modern_uniform
+    }
+}
+
+pmg_GGGG_uniforms_consc = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    ai_selection = most_productive
+    
+    production_methods = {
+        pm_GGGG_no_uniforms
+        pm_GGGG_traditional_uniforms
+        pm_GGGG_full_dress_consc
+        pm_GGGG_modern_uniform_consc
+    }
+}
+
+pmg_GGGG_uniforms_navy = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    ai_selection = most_productive
+    
+    production_methods = {
+        pm_GGGG_no_uniforms
+        pm_GGGG_traditional_uniforms
+        pm_GGGG_full_dress_navy
+        pm_GGGG_modern_uniform_navy
     }
 }

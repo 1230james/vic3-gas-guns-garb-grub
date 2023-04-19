@@ -1,8 +1,10 @@
 ﻿l_english:
     # Production method groups
-    pmg_GGGG_guns:0     "Infantry Equipment"
-    pmg_GGGG_rations:0  "Rations"
-    pmg_GGGG_uniforms:0 "Uniforms"
+    pmg_GGGG_guns:0           "Infantry Equipment"
+    pmg_GGGG_rations:0        "Rations"
+    pmg_GGGG_uniforms:0       "Uniforms"
+    pmg_GGGG_uniforms_consc:0 "$pmg_GGGG_uniforms$"
+    pmg_GGGG_uniforms_navy:0  "$pmg_GGGG_uniforms$"
     
     # Gun PMs
     pm_GGGG_melee:0        "Primitive Weapons"
@@ -20,6 +22,15 @@
     # Uniforms PMs
     pm_GGGG_no_uniforms:0          "No Uniforms"
     pm_GGGG_traditional_uniforms:0 "Traditional Garb"
-    pm_GGGG_regimental_colors:0    "Regimental Dress"
+    pm_GGGG_full_dress:0           "Full Dress"
+    pm_GGGG_full_dress_consc:0     "$pm_GGGG_full_dress$"
+    pm_GGGG_full_dress_navy:0      "$pm_GGGG_full_dress$"
     pm_GGGG_modern_uniform:0       "Helmets & Drab"
+    pm_GGGG_modern_uniform_consc:0 "$pm_GGGG_modern_uniform$"
+    pm_GGGG_modern_uniform_navy:0  "Caps & Coats"
+    
+    # Input good modifiers
+    # TODO: Verify error is suppressed
+    building_input_luxury_clothes_add:0      "@luxury_clothes! Luxury Clothes input per level"
+    building_input_luxury_clothes_add_desc:0 "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
     

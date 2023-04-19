@@ -51,7 +51,7 @@ building_conscription_center = {
 		pmg_specialist_companies_conscription
 		pmg_medical_aid
         pmg_GGGG_rations
-        pmg_GGGG_uniforms
+        pmg_GGGG_uniforms_consc
 	}
 }
 
@@ -73,7 +73,7 @@ building_naval_base = {
 		pmg_raiders
 		pmg_naval_theory
         pmg_GGGG_rations
-        pmg_GGGG_uniforms
+        pmg_GGGG_uniforms_navy
 	}
 	
 	required_construction = construction_cost_very_low
