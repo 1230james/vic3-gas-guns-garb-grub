@@ -15,7 +15,7 @@
     
     # Rations PMs
     pm_GGGG_foraged_rations:0      "Local Foraging"
-    pm_GGGG_bread_meat_rations:0   "Hardtack & Salt Pork"
+    pm_GGGG_bread_meat_rations:0   "Hardtack & Salted Meat"
     pm_GGGG_canned_rations:0       "Canned Goods"
     pm_GGGG_refrigerated_rations:0 "Refrigerated Produce"
     

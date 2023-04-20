@@ -1,5 +1,5 @@
 ﻿pm_GGGG_foraged_rations = {
-	texture   = "gfx/interface/icons/production_method_icons/no_canning.dds"
+	texture   = "gfx/interface/icons/production_method_icons/GGGG_foraging.dds"
     ai_weight = 0.5
     
 	building_modifiers = {
@@ -13,7 +13,7 @@
 }
 
 pm_GGGG_bread_meat_rations = {
-	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
+	texture = "gfx/interface/icons/production_method_icons/GGGG_bread_meat.dds"
 	is_default = yes
     
     unlocking_technologies = {
@@ -38,7 +38,7 @@ pm_GGGG_bread_meat_rations = {
 }
 
 pm_GGGG_canned_rations = {
-	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	texture = "gfx/interface/icons/production_method_icons/GGGG_canned_goods.dds"
 	is_default = yes
     
     unlocking_technologies = {
@@ -63,7 +63,7 @@ pm_GGGG_canned_rations = {
 }
 
 pm_GGGG_refrigerated_rations = {
-    texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_refrigerated.dds"
 	is_default = yes
     
     unlocking_technologies = {

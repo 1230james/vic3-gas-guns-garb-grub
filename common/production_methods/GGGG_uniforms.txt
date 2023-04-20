@@ -10,7 +10,7 @@
 }
 
 pm_GGGG_traditional_uniforms = {
-    texture = "gfx/interface/icons/production_method_icons/handsewn_clothes.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_jeollip.dds"
 	is_default = yes
     
 	building_modifiers = {
@@ -25,7 +25,7 @@ pm_GGGG_traditional_uniforms = {
 }
 
 pm_GGGG_full_dress = {
-    texture = "gfx/interface/icons/production_method_icons/unused/refining3.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_shako.dds"
 	is_default = yes
     
     unlocking_technologies = {
@@ -58,7 +58,7 @@ pm_GGGG_full_dress = {
 }
 
 pm_GGGG_full_dress_consc = {
-    texture = "gfx/interface/icons/production_method_icons/unused/refining3.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_shako.dds"
 	is_default = yes
     
     unlocking_technologies = {
@@ -91,7 +91,7 @@ pm_GGGG_full_dress_consc = {
 }
 
 pm_GGGG_full_dress_navy = {
-    texture = "gfx/interface/icons/production_method_icons/unused/refining3.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_shako.dds"
 	is_default = yes
     
     unlocking_technologies = {
@@ -117,7 +117,7 @@ pm_GGGG_full_dress_navy = {
 }
 
 pm_GGGG_modern_uniform = {
-    texture    = "gfx/interface/icons/production_method_icons/unused/refining4.dds"
+    texture    = "gfx/interface/icons/production_method_icons/GGGG_brodie.dds"
 	is_default = yes
     ai_weight  = 1.5
     
@@ -151,7 +151,7 @@ pm_GGGG_modern_uniform = {
 }
 
 pm_GGGG_modern_uniform_consc = {
-    texture    = "gfx/interface/icons/production_method_icons/unused/refining4.dds"
+    texture    = "gfx/interface/icons/production_method_icons/GGGG_brodie.dds"
 	is_default = yes
     ai_weight  = 1.5
     
@@ -185,7 +185,7 @@ pm_GGGG_modern_uniform_consc = {
 }
 
 pm_GGGG_modern_uniform_navy = {
-    texture    = "gfx/interface/icons/production_method_icons/unused/refining4.dds"
+    texture    = "gfx/interface/icons/production_method_icons/GGGG_cap.dds"
 	is_default = yes
     ai_weight  = 1.5
     
