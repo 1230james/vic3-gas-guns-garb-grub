@@ -30,7 +30,6 @@
     pm_GGGG_modern_uniform_navy:0  "Caps & Coats"
     
     # Input good modifiers
-    # TODO: Verify error is suppressed
-    building_input_luxury_clothes_add:0      "@luxury_clothes! Luxury Clothes input per level"
-    building_input_luxury_clothes_add_desc:0 "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
+    modifier_building_input_luxury_clothes_add:0      "@luxury_clothes! Luxury Clothes input per level"
+    modifier_building_input_luxury_clothes_add_desc:0 "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
     

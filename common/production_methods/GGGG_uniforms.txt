@@ -1,6 +1,5 @@
 ﻿pm_GGGG_no_uniforms = {
 	texture   = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
-    ai_weight = 0.5
     
 	country_modifiers = {
         unscaled = {
@@ -119,7 +118,6 @@ pm_GGGG_full_dress_navy = {
 pm_GGGG_modern_uniform = {
     texture    = "gfx/interface/icons/production_method_icons/GGGG_brodie.dds"
 	is_default = yes
-    ai_weight  = 1.5
     
     unlocking_technologies = {
         trench_works
@@ -153,7 +151,6 @@ pm_GGGG_modern_uniform = {
 pm_GGGG_modern_uniform_consc = {
     texture    = "gfx/interface/icons/production_method_icons/GGGG_brodie.dds"
 	is_default = yes
-    ai_weight  = 1.5
     
     unlocking_technologies = {
         trench_works
@@ -187,7 +184,6 @@ pm_GGGG_modern_uniform_consc = {
 pm_GGGG_modern_uniform_navy = {
     texture    = "gfx/interface/icons/production_method_icons/GGGG_cap.dds"
 	is_default = yes
-    ai_weight  = 1.5
     
     unlocking_technologies = {
         sea_lane_strategies
