@@ -1,5 +1,5 @@
 ﻿GLOBAL = {
-	every_country = {
+    every_country = {
         every_scope_state = {
             # Set rations PM - pick most advanced
             if = {

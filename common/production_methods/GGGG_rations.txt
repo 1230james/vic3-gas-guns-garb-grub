@@ -1,92 +1,92 @@
 ﻿pm_GGGG_foraged_rations = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_foraging.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_foraging.dds"
     
-	building_modifiers = {
+    building_modifiers = {
         unscaled = {
             unit_devastation_mult     = 0.05
             unit_morale_loss_mult     = 0.10
             unit_recovery_rate_add    = -0.10
             unit_morale_recovery_mult = -0.10
-		}
-	}
+        }
+    }
 }
 
 pm_GGGG_bread_meat_rations = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_bread_meat.dds"
-	is_default = yes
+    texture = "gfx/interface/icons/production_method_icons/GGGG_bread_meat.dds"
+    is_default = yes
     
     unlocking_technologies = {
-	}
+    }
     
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_grain_add = 0.6
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_grain_add = 0.6
             building_input_meat_add  = 0.4
-		}
+        }
 
-		throughput_scaled = {
-		}
+        throughput_scaled = {
+        }
         
         unscaled = {
-		}
-	}
+        }
+    }
     
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
+    timed_modifiers = {
+        pm_offense_defense_readjustment_minor
+    }
 }
 
 pm_GGGG_canned_rations = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_canned_goods.dds"
-	is_default = yes
+    texture = "gfx/interface/icons/production_method_icons/GGGG_canned_goods.dds"
+    is_default = yes
     
     unlocking_technologies = {
         canneries
-	}
+    }
     
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_groceries_add = 1
-		}
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_groceries_add = 1
+        }
 
-		throughput_scaled = {
-		}
+        throughput_scaled = {
+        }
         
         unscaled = {
-		}
-	}
+        }
+    }
     
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
+    timed_modifiers = {
+        pm_offense_defense_readjustment_minor
+    }
 }
 
 pm_GGGG_refrigerated_rations = {
     texture = "gfx/interface/icons/production_method_icons/GGGG_refrigerated.dds"
-	is_default = yes
+    is_default = yes
     
     unlocking_technologies = {
         pasteurization
-	}
+    }
     
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_groceries_add   = 0.5
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_groceries_add   = 0.5
             building_input_fruit_add       = 0.25
             building_input_meat_add        = 0.25
             building_input_electricity_add = 5
-		}
+        }
 
-		throughput_scaled = {
-		}
+        throughput_scaled = {
+        }
         
         unscaled = {
             unit_morale_recovery_mult = 0.10
             unit_recovery_rate_add    = 0.10
-		}
-	}
+        }
+    }
     
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
+    timed_modifiers = {
+        pm_offense_defense_readjustment_minor
+    }
 }
