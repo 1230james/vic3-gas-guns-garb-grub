@@ -17,10 +17,6 @@ pm_GGGG_traditional_uniforms = {
             building_input_clothes_add = 0.5
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_full_dress = {
@@ -28,7 +24,7 @@ pm_GGGG_full_dress = {
     is_default = yes
     
     unlocking_technologies = {
-        military_drill
+        line_infantry
     }
     
     unlocking_production_methods = {
@@ -50,10 +46,6 @@ pm_GGGG_full_dress = {
             country_prestige_mult = 0.05
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_full_dress_consc = {
@@ -61,7 +53,7 @@ pm_GGGG_full_dress_consc = {
     is_default = yes
     
     unlocking_technologies = {
-        military_drill
+        line_infantry
     }
     
     unlocking_production_methods = {
@@ -83,10 +75,6 @@ pm_GGGG_full_dress_consc = {
             country_prestige_mult = 0.05
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_full_dress_navy = {
@@ -94,8 +82,7 @@ pm_GGGG_full_dress_navy = {
     is_default = yes
     
     unlocking_technologies = {
-        admiralty
-        military_drill
+        line_infantry
     }
     
     building_modifiers = {
@@ -108,10 +95,6 @@ pm_GGGG_full_dress_navy = {
         unscaled = {
             country_prestige_mult = 0.05
         }
-    }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
     }
 }
 
@@ -142,10 +125,6 @@ pm_GGGG_modern_uniform = {
             unit_defense_add = 10
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_modern_uniform_consc = {
@@ -175,10 +154,6 @@ pm_GGGG_modern_uniform_consc = {
             unit_defense_add = 10
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_modern_uniform_navy = {
@@ -200,9 +175,5 @@ pm_GGGG_modern_uniform_navy = {
         unscaled = {
             country_prestige_mult = 0.10
         }
-    }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
     }
 }

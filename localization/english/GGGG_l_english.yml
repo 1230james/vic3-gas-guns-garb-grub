@@ -33,3 +33,25 @@
     modifier_building_input_luxury_clothes_add:0      "@luxury_clothes! Luxury Clothes input per level"
     modifier_building_input_luxury_clothes_add_desc:0 "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
     
+    # Static modifiers
+    GGGG_food_throughput_modifier:0 "Canned Military Rations"
+    
+    # Journal entries
+    GGGG_je_canned_goods:0        "Canned Military Rations"
+    GGGG_je_canned_goods_reason:0 "With the invention of canning as a method to preserve food, military planners are looking to switch to canned goods to add variety to their rations whilst simplifying the food logistics."
+    
+    # Events
+    GGGG_ev_rations_1_title:0  "A Canned Success!"
+    GGGG_ev_rations_1_desc:0   "The adoption of canned goods to feed our soldiers has significantly improved the shelf life, variety, and quality of our military nutrition."
+    GGGG_ev_rations_1_flavor:0 ""It may not be my wife's home cooking, but it's better than the dry biscuits and spoiled vegetables. Keeps the cat out of the meats, too.""
+    GGGG_ev_rations_1_a:0      "An army marches on its stomach."
+    GGGG_ev_rations_1_b:0      "Developing a standardized can opener would be prudent."
+    GGGG_ev_rations_1_c:0      "Perhaps we can bring home cooking to the front somehow?"
+    
+    GGGG_ev_rations_2_title:0  "Farm-Fresh on the Front"
+    GGGG_ev_rations_2_desc:0   "Modern food production and handling technologies have allowed our soldiers to eat fresh produce and goods, even far away from home."
+    GGGG_ev_rations_2_flavor:0 ""Even from farm to field kitchen, the meals we have taste fresh, as if it were all sourced locally. Sir, it's truly nothing short of revolutionary that the men can eat like this even across continents and oceans!""
+    GGGG_ev_rations_2_a:0      "Meals, ready to eat!"
+    GGGG_ev_rations_2_b:0      "Everyone deserves to have fresh food everywhere!"
+    GGGG_ev_rations_2_c:0      "Perhaps we should invest in a can opener for the troops next?"
+    

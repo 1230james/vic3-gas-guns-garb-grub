@@ -30,10 +30,6 @@ pm_GGGG_bread_meat_rations = {
         unscaled = {
         }
     }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
-    }
 }
 
 pm_GGGG_canned_rations = {
@@ -54,10 +50,6 @@ pm_GGGG_canned_rations = {
         
         unscaled = {
         }
-    }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
     }
 }
 
@@ -84,9 +76,5 @@ pm_GGGG_refrigerated_rations = {
             unit_morale_recovery_mult = 0.10
             unit_recovery_rate_add    = 0.10
         }
-    }
-    
-    timed_modifiers = {
-        pm_offense_defense_readjustment_minor
     }
 }

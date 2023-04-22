@@ -22,7 +22,7 @@ pm_GGGG_flintlocks = {
         }
         
         unscaled = {
-            unit_kill_rate_add = 0.05
+            unit_kill_rate_add = 0.02
         }
     }
     
@@ -60,7 +60,7 @@ pm_GGGG_caplocks = {
         }
 
         unscaled = {
-            unit_kill_rate_add = 0.1
+            unit_kill_rate_add = 0.04
         }
     }
     
@@ -98,7 +98,7 @@ pm_GGGG_repeaters = {
         }
 
         unscaled = {
-            unit_kill_rate_add = 0.15
+            unit_kill_rate_add = 0.06
         }
     }
     
@@ -136,7 +136,7 @@ pm_GGGG_bolt_actions = {
         }
 
         unscaled = {
-            unit_kill_rate_add = 0.20
+            unit_kill_rate_add = 0.08
         }
     }
     

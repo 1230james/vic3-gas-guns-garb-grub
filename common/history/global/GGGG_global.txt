@@ -1,4 +1,11 @@
 ﻿GLOBAL = {
+    # Set GGGG flag - for use in other mods for compatibility checks
+    set_global_variable = {
+        name  = GGGG_is_active
+        value = yes
+    }
+    
+    # Default PMs
     every_country = {
         every_scope_state = {
             # Set rations PM - pick most advanced
@@ -22,6 +29,12 @@
                 activate_production_method = {
                     building_type     = building_naval_base
                     production_method = pm_GGGG_refrigerated_rations
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_rations_3
+                        value = yes
+                    }
                 }
             }
             else_if = {
