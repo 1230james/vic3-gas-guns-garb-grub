@@ -1,4 +1,6 @@
-﻿GGGG_je_canned_goods = {
+﻿# Remember to check localization for any hard-coded values that appear in tooltips if updates to numbers are made
+
+GGGG_je_canned_goods = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     
     is_shown_when_inactive = {
@@ -13,18 +15,22 @@
         has_technology_researched = canneries
     }
     
+    immediate = {
+        ROOT = {
+            save_scope_as = target_country
+        }
+    }
+    
     complete = {
-        GGGG_sv_pm_usage_canned_rations > 0.75
-        #country_pm_usage = {
-        #    target = ROOT
-        #    value  > 0.75
-        #    production_method = pm_GGGG_canned_rations
-        #}
+        custom_tooltip = {
+            text = GGGG_tt_canned_goods_je
+            GGGG_sv_pm_usage_canned_rations > 0.75 # GGGG_tt_canned_goods_je
+        }
     }
     
     on_complete = {
         trigger_event = {
-            id = GGGG_rations_1
+            id = GGGG_ev_rations.1
         }
     }
     

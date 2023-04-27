@@ -1,4 +1,6 @@
-﻿#GGGG_je_full_dress = {
+﻿# Remember to check localization for any hard-coded values that appear in tooltips if updates to numbers are made
+
+#GGGG_je_full_dress = {
 #    icon = "gfx/interface/icons/event_icons/event_military.dds"
 #    
 #    is_shown_when_inactive = {

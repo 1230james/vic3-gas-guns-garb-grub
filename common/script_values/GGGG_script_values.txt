@@ -1,5 +1,44 @@
-﻿GGGG_sv_pm_usage_canned_rations = {
+﻿# idk how to do this with only one iteration :(
+GGGG_sv_count_military_buildings = {
     value = 0
     
-    # TODO
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            add = 1
+        }
+    }
+}
+
+GGGG_sv_pm_usage_canned_rations = {
+    # Count PM usage
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            if = {
+                limit = {
+                    has_active_production_method = pm_GGGG_canned_rations
+                }
+                add = 1
+            }
+        }
+    }
+    
+    # Turn into ratio
+    divide = GGGG_sv_count_military_buildings
 }

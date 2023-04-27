@@ -40,6 +40,9 @@
     GGGG_je_canned_goods:0        "Canned Military Rations"
     GGGG_je_canned_goods_reason:0 "With the invention of canning as a method to preserve food, military planners are looking to switch to canned goods to add variety to their rations whilst simplifying the food logistics."
     
+    # Tooltips; be diligent with hard-coded numbers
+    GGGG_tt_canned_goods_je:0 "Current combined usage of #v $pm_GGGG_canned_rations$#! across #I all military buildings#! is at least #v 75%#!.\n    #EMP (Currently [ Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_canned_rations'), '(CFixedPoint)100' )|0 ]%)#!"
+    
     # Events
     GGGG_ev_rations_1_title:0  "A Canned Success!"
     GGGG_ev_rations_1_desc:0   "The adoption of canned goods to feed our soldiers has significantly improved the shelf life, variety, and quality of our military nutrition."
