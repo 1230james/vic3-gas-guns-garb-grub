@@ -1,7 +1,7 @@
-﻿namespace = GGGG
+﻿namespace = GGGG_ev_rations
 
 # Adopt canned rations
-GGGG_ev_rations_1 = {
+GGGG_ev_rations.1 = {
     type      = country_event
     placement = root
     
@@ -233,7 +233,7 @@ GGGG_ev_rations_1 = {
 }
 
 # Adopt refrigerated rations
-GGGG_ev_rations_2 = {
+GGGG_ev_rations.2 = {
     type      = country_event
     placement = root
     
@@ -269,7 +269,7 @@ GGGG_ev_rations_2 = {
     }
     
     option = { # Boost food & agriculture industry throughput
-        name = GGGG_ev_rations_2_a
+        name = GGGG_ev_rations_2_b
         default_option = yes
         
         set_variable = {
