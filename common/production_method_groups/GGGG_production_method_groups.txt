@@ -52,7 +52,7 @@ pmg_GGGG_uniforms_navy = {
     ai_selection = most_productive
     
     production_methods = {
-        pm_GGGG_no_uniforms
+        pm_GGGG_no_uniforms_navy
         pm_GGGG_traditional_uniforms
         pm_GGGG_full_dress_navy
         pm_GGGG_modern_uniform_navy

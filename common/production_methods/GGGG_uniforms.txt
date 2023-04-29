@@ -6,6 +6,22 @@
             unit_morale_loss_mult = 0.05
         }
     }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_army_power_projection_add = -1
+        }
+    }
+}
+
+pm_GGGG_no_uniforms_navy = {
+    texture = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_navy_power_projection_add = -1
+        }
+    }
 }
 
 pm_GGGG_traditional_uniforms = {
@@ -41,7 +57,14 @@ pm_GGGG_full_dress = {
         }
         
         throughput_scaled = {
-            unit_morale_damage_mult = 0.05
+            unit_morale_damage_mult =  0.05
+            unit_recovery_rate_add  = -0.05
+        }
+    }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_army_power_projection_add = 1
         }
     }
 }
@@ -68,7 +91,14 @@ pm_GGGG_full_dress_consc = {
         }
         
         throughput_scaled = {
-            unit_morale_damage_mult = 0.05
+            unit_morale_damage_mult =  0.05
+            unit_recovery_rate_add  = -0.05
+        }
+    }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_army_power_projection_add = 1
         }
     }
 }
@@ -85,9 +115,11 @@ pm_GGGG_full_dress_navy = {
         workforce_scaled = {
             building_input_luxury_clothes_add = 0.75
         }
-        
-        throughput_scaled = {
-            unit_morale_damage_mult = 0.05
+    }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_navy_power_projection_add = 1
         }
     }
 }
@@ -115,8 +147,15 @@ pm_GGGG_modern_uniform = {
         }
         
         throughput_scaled = {
-            unit_offense_add = 10
-            unit_defense_add = 10
+            unit_offense_add       = 10
+            unit_defense_add       = 10
+            unit_recovery_rate_add = 0.1
+        }
+    }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_army_power_projection_add = 2
         }
     }
 }
@@ -144,8 +183,15 @@ pm_GGGG_modern_uniform_consc = {
         }
         
         throughput_scaled = {
-            unit_offense_add = 10
-            unit_defense_add = 10
+            unit_offense_add       = 10
+            unit_defense_add       = 10
+            unit_recovery_rate_add = 0.1
+        }
+    }
+    
+    country_modifiers = {
+        workforce_scaled = {
+            country_army_power_projection_add = 2
         }
     }
 }
@@ -166,8 +212,8 @@ pm_GGGG_modern_uniform_navy = {
     }
     
     country_modifiers = {
-        unscaled = {
-            country_prestige_mult = 0.10
+        workforce_scaled = {
+            country_navy_power_projection_add = 2
         }
     }
 }

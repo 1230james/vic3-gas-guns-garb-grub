@@ -21,6 +21,7 @@
     
     # Uniforms PMs
     pm_GGGG_no_uniforms:0          "No Uniforms"
+    pm_GGGG_no_uniforms_navy:0     "$pm_GGGG_no_uniforms$"
     pm_GGGG_traditional_uniforms:0 "Traditional Garb"
     pm_GGGG_full_dress:0           "Full Dress"
     pm_GGGG_full_dress_consc:0     "$pm_GGGG_full_dress$"
