@@ -16,3 +16,19 @@ GGGG_produce_throughput_modifier = {
     building_group_bg_ranching_throughput_mult    = 0.15
     building_group_bg_plantations_throughput_mult = 0.15
 }
+
+GGGG_dress_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_prestige_mult = 0.10
+}
+
+GGGG_parade_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+}
+
+GGGG_helmets_throughput_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    building_textile_mills_throughput_mult = 0.15
+    building_steel_mills_throughput_mult   = 0.05
+}

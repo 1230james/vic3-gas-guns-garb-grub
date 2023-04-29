@@ -22,14 +22,17 @@ GGGG_ev_rations.1 = {
 
     trigger = {} # Triggered from journal entry
     
-    option = { # Boost food industry throughput
-        name = GGGG_ev_rations_1_a
-        default_option = yes
-        
+    immediate = {
         set_variable = {
             name  = GGGG_has_rations_2
             value = yes
         }
+    }
+    
+    option = { # Boost food industry throughput
+        name = GGGG_ev_rations_1_a
+        default_option = yes
+        
         add_modifier = {
             name   = GGGG_food_throughput_modifier
             months = normal_modifier_time
@@ -45,10 +48,6 @@ GGGG_ev_rations.1 = {
             }
         }
         
-        set_variable = {
-            name  = GGGG_has_rations_2
-            value = yes
-        }
         set_variable = {
             name  = war_time_cans
             value = yes
@@ -87,15 +86,8 @@ GGGG_ev_rations.1 = {
             }
         }
         
-        set_variable = {
-            name  = GGGG_has_rations_2
-            value = yes
-        }
         if = { # Enclosure (Enclosure -> Shaft Mining -> Steelworking -> Mechanical Tools -> ...)
             limit = {
-                NOT = {
-                    has_technology_researched = enclosure
-                }
                 can_research = enclosure
             }
             add_technology_progress = {
@@ -105,9 +97,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Shaft Mining
             limit = {
-                NOT = {
-                    has_technology_researched = shaft_mining
-                }
                 can_research = shaft_mining
             }
             add_technology_progress = {
@@ -117,9 +106,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Steelworking
             limit = {
-                NOT = {
-                    has_technology_researched = steelworking
-                }
                 can_research = steelworking
             }
             add_technology_progress = {
@@ -129,9 +115,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Mechanical Tools (MT -> Mechanized Workshops - > Vacuum Canning -> ...)
             limit = {
-                NOT = {
-                    has_technology_researched = mechanical_tools
-                }
                 can_research = mechanical_tools
             }
             add_technology_progress = {
@@ -141,9 +124,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Mechanized Workshops
             limit = {
-                NOT = {
-                    has_technology_researched = mechanized_workshops
-                }
                 can_research = mechanized_workshops
             }
             add_technology_progress = {
@@ -153,9 +133,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Atmospheric Engine (AE -> Water-tube Boiler -> Rotary Valve Engine -> ...)
             limit = {
-                NOT = {
-                    has_technology_researched = atmospheric_engine
-                }
                 can_research = atmospheric_engine
             }
             add_technology_progress = {
@@ -165,9 +142,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Water-tube Boiler
             limit = {
-                NOT = {
-                    has_technology_researched = watertube_boiler
-                }
                 can_research = watertube_boiler
             }
             add_technology_progress = {
@@ -177,9 +151,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Vacuum Canning (VC -> Pasteurization)
             limit = {
-                NOT = {
-                    has_technology_researched = vacuum_canning
-                }
                 can_research = vacuum_canning
             }
             add_technology_progress = {
@@ -189,9 +160,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Rotary Valve Engine (RVE -> Electrical Generation -> Electrical Capacitors -> ...)
             limit = {
-                NOT = {
-                    has_technology_researched = rotary_valve_engine
-                }
                 can_research = rotary_valve_engine
             }
             add_technology_progress = {
@@ -201,9 +169,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Electrical Generation
             limit = {
-                NOT = {
-                    has_technology_researched = electrical_generation
-                }
                 can_research = electrical_generation
             }
             add_technology_progress = {
@@ -213,9 +178,6 @@ GGGG_ev_rations.1 = {
         }
         else_if = { # Electrical Capacitors (EC -> Pasteurization)
             limit = {
-                NOT = {
-                    has_technology_researched = electrical_capacitors
-                }
                 can_research = electrical_capacitors
             }
             add_technology_progress = {
@@ -254,14 +216,17 @@ GGGG_ev_rations.2 = {
 
     trigger = {} # Triggered from journal entry
     
-    option = { # Morale & recovery bonus
-        name = GGGG_ev_rations_2_a
-        default_option = yes
-        
+    immediate = {
         set_variable = {
             name  = GGGG_has_rations_3
             value = yes
         }
+    }
+    
+    option = { # Morale & recovery bonus
+        name = GGGG_ev_rations_2_a
+        default_option = yes
+        
         add_modifier = {
             name   = GGGG_fresh_rations_modifier
             months = normal_modifier_time
@@ -270,12 +235,7 @@ GGGG_ev_rations.2 = {
     
     option = { # Boost food & agriculture industry throughput
         name = GGGG_ev_rations_2_b
-        default_option = yes
         
-        set_variable = {
-            name  = GGGG_has_rations_3
-            value = yes
-        }
         add_modifier = {
             name   = GGGG_produce_throughput_modifier
             months = normal_modifier_time
@@ -292,15 +252,12 @@ GGGG_ev_rations.2 = {
         }
         
         set_variable = {
-            name  = GGGG_has_rations_3
-            value = yes
-        }
-        set_variable = {
             name  = war_time_cans
             value = yes
         }
         add_modifier = {
             name       = GGGG_fresh_rations_modifier
+            multiplier = 0.5
             months     = normal_modifier_time
         }
         add_modifier = {

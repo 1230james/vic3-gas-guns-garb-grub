@@ -1,9 +1,9 @@
 ﻿pm_GGGG_no_uniforms = {
-    texture   = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
+    texture = "gfx/interface/icons/production_method_icons/no_luxury_clothes.dds"
     
-    country_modifiers = {
-        unscaled = {
-            country_prestige_mult = -0.05
+    building_modifiers = {
+        throughput_scaled = {
+            unit_morale_loss_mult = 0.05
         }
     }
 }
@@ -39,11 +39,9 @@ pm_GGGG_full_dress = {
         workforce_scaled = {
             building_input_luxury_clothes_add = 0.75
         }
-    }
-    
-    country_modifiers = {
-        unscaled = {
-            country_prestige_mult = 0.05
+        
+        throughput_scaled = {
+            unit_morale_damage_mult = 0.05
         }
     }
 }
@@ -68,11 +66,9 @@ pm_GGGG_full_dress_consc = {
         workforce_scaled = {
             building_input_luxury_clothes_add = 0.75
         }
-    }
-    
-    country_modifiers = {
-        unscaled = {
-            country_prestige_mult = 0.05
+        
+        throughput_scaled = {
+            unit_morale_damage_mult = 0.05
         }
     }
 }
@@ -89,11 +85,9 @@ pm_GGGG_full_dress_navy = {
         workforce_scaled = {
             building_input_luxury_clothes_add = 0.75
         }
-    }
-    
-    country_modifiers = {
-        unscaled = {
-            country_prestige_mult = 0.05
+        
+        throughput_scaled = {
+            unit_morale_damage_mult = 0.05
         }
     }
 }

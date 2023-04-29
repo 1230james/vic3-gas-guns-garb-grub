@@ -34,14 +34,28 @@
     modifier_building_input_luxury_clothes_add_desc:0 "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
     
     # Static modifiers
-    GGGG_food_throughput_modifier:0 "Canned Military Rations"
+    GGGG_food_throughput_modifier:0    "Canned Military Rations"
+    GGGG_fresh_rations_modifier:0      "Freshly-Stocked Field Kitchens"
+    GGGG_produce_throughput_modifier:0 "Incentivized Fresh Produce"
+    GGGG_dress_modifier:0              "New Military Dress"
+    GGGG_parade_modifier:0             "Patrotic Parade"
+    GGGG_helmets_throughput_modifier:0 "Modern Uniform Adoption"
     
     # Journal entries
-    GGGG_je_canned_goods:0        "Canned Military Rations"
-    GGGG_je_canned_goods_reason:0 "With the invention of canning as a method to preserve food, military planners are looking to switch to canned goods to add variety to their rations whilst simplifying the food logistics."
+    GGGG_je_canned_goods:0                "Canned Military Rations"
+    GGGG_je_canned_goods_reason:0         "With the invention of canning as a method to preserve food, military planners are looking to switch to canned goods to add variety to their rations whilst simplifying the food logistics."
+    GGGG_je_refrigerated_produce:0        "Refrigerated Military Rations"
+    GGGG_je_refrigerated_produce_reason:0 "With the invention of refrigeration as a means to preserve food, military logistics leaders are hoping to take advantage of the invention to keep rations more fresh and varied than before."
+    GGGG_je_full_dress:0                  "Colorful Military Dress"
+    GGGG_je_full_dress_reason:0           "As a result of our new firearms and military doctrine, military leaders are pushing to adopt colorful, highly-visible uniforms to ensure cohesion on the battlefield."
+    GGGG_je_helmets_drab:0                "Drab Combat Uniforms"
+    GGGG_je_helmets_drab_reason:0         "Battle analyses conclude that the colorful dress of the past has now become obsolete and is actively getting our soldiers wounded and killed. Military leaders are now pushing to adopt more pragmatic uniforms."
     
     # Tooltips
-    GGGG_tt_canned_goods_je:0 "Current combined usage of #v $pm_GGGG_canned_rations$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP - (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_canned_goods_je:0 "Current combined usage of #v $pm_GGGG_canned_rations$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_refrigerated_je:0 "Current combined usage of #v $pm_GGGG_refrigerated_rations$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_REFRIGERATED_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_refrigerated_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_full_dress_je:0   "Current combined usage of #v $pm_GGGG_full_dress$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_FULL_DRESS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_full_dress'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_helmets_drab_je:0 "Current combined usage of #v $pm_GGGG_modern_uniform$#! across #bold all army battalions#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_HELMETS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_helmets_drab'), '(CFixedPoint)100' )|0]%#!)#!"
     
     # Events
     GGGG_ev_rations_1_title:0  "A Canned Success!"
@@ -57,4 +71,19 @@
     GGGG_ev_rations_2_a:0      "Meals, ready to eat!"
     GGGG_ev_rations_2_b:0      "Everyone deserves to have fresh food everywhere!"
     GGGG_ev_rations_2_c:0      "Perhaps we should invest in a can opener for the troops next?"
+    
+    GGGG_ev_uniforms_1_title:0  "Trendsetting Army Fashion"
+    GGGG_ev_uniforms_1_desc:0   "It appears that our adoption of colorful regimental dresses have garnered the love of the fashion-oriented and the common man."
+    GGGG_ev_uniforms_1_flavor:0 ""Regardless of class or background, the army'll ought to make a distinguished individual of interest out of you!""
+    GGGG_ev_uniforms_1_a:0      "Organize a parade to show patriots the glory that awaits them!"
+    GGGG_ev_uniforms_1_b:0      "These uniforms will be the top models of the world!"
+    GGGG_ev_uniforms_1_c:0      "Can't we give them something more pragmatic and reasonable?"
+    
+    GGGG_ev_uniforms_2_title:0  "The Modern Combat Uniform"
+    GGGG_ev_uniforms_2_desc:0   "Field studies are showing that, although less prestigious, the new plain uniforms and steel helmets are effective at reducing casualties."
+    GGGG_ev_uniforms_2_flavor:0 ""I was hit on the forehead and knocked flying onto the floor of the trench... a shrapnel bullet had hit my helmet with great violence, without piercing it, but sufficiently hard to dent it. If I had, as had been usual up until a few days previously, been wearing a cap, then the Regiment would have had one more man killed.""
+    GGGG_ev_uniforms_2_a:0      "We must focus on procuring more of this life-saving equipment."
+    GGGG_ev_uniforms_2_b:0      "Modern gear is useless if we don't have equally modern logistics."
+    GGGG_ev_uniforms_2_c:0      "If an inch of steel can save a man, could yards save the nation?"
+    GGGG_ev_uniforms_2_d:0      "If an inch of steel can stop a bullet, imagine the potential for a beast of machinery clad in it!"
     
