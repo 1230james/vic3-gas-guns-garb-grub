@@ -1,0 +1,166 @@
+﻿# idk how to do this with only one iteration :(
+GGGG_sv_count_military_buildings = {
+    value = 0
+    
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            add = 1
+        }
+    }
+    
+    # Crude DIV/0 guard - safe to do because if # of military buildings is 0 then the # of them using any of the PMs
+    # this script_value is used to calculate the usage ratio for will also be 0
+    min = 1
+}
+
+GGGG_sv_count_military_building_levels = {
+    value = 0
+    
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            add = level
+        }
+    }
+    
+    # DIV/0 guard
+    min = 1
+}
+
+GGGG_sv_count_army_building_levels = {
+    value = 0
+    
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                }
+            }
+            
+            add = level
+        }
+    }
+    
+    # DIV/0 guard
+    min = 1
+}
+
+# ==================================================================================================================== #
+
+GGGG_sv_pm_usage_canned_rations = {
+    # Count PM usage
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            if = {
+                limit = {
+                    has_active_production_method = pm_GGGG_canned_rations
+                }
+                add = level
+            }
+        }
+    }
+    
+    # Turn into ratio
+    divide = GGGG_sv_count_military_building_levels
+}
+
+GGGG_sv_pm_usage_refrigerated_rations = {
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            if = {
+                limit = {
+                    has_active_production_method = pm_GGGG_refrigerated_rations
+                }
+                add = level
+            }
+        }
+    }
+    divide = GGGG_sv_count_military_building_levels
+}
+
+GGGG_sv_pm_usage_full_dress = {
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            if = {
+                limit = {
+                    OR = {
+                        has_active_production_method = pm_GGGG_full_dress
+                        has_active_production_method = pm_GGGG_full_dress_consc
+                        has_active_production_method = pm_GGGG_full_dress_navy
+                    }
+                }
+                add = level
+            }
+        }
+    }
+    divide = GGGG_sv_count_military_building_levels
+}
+
+GGGG_sv_pm_usage_helmets_drab = {
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                }
+            }
+            
+            if = {
+                limit = {
+                    OR = {
+                        has_active_production_method = pm_GGGG_modern_uniform
+                        has_active_production_method = pm_GGGG_modern_uniform_consc
+                    }
+                }
+                add = level
+            }
+        }
+    }
+    divide = GGGG_sv_count_army_building_levels
+}

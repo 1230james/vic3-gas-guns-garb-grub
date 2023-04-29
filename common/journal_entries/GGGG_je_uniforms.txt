@@ -1,0 +1,90 @@
+﻿GGGG_je_full_dress = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    is_shown_when_inactive = {
+        NOR = {
+            has_variable = GGGG_has_uniforms_3
+            has_variable = GGGG_has_uniforms_2
+        }
+        OR = {
+            has_technology_researched = mandatory_service
+            has_technology_researched = military_drill
+        }
+        GGGG_sv_count_military_building_levels >= 5
+    }
+    
+    possible = {
+        has_technology_researched = line_infantry
+    }
+    
+    immediate = {
+        ROOT = {
+            save_scope_as = target_country
+        }
+    }
+    
+    complete = {
+        custom_tooltip = {
+            text = GGGG_tt_full_dress_je
+            GGGG_sv_pm_usage_full_dress > GGGG_FULL_DRESS_ADOPTION_THRESHOLD
+        }
+    }
+    
+    on_complete = {
+        trigger_event = {
+            id = GGGG_ev_uniforms.1
+        }
+    }
+    
+    invalid = {
+        OR = {
+            hidden_trigger = {
+                has_variable = GGGG_has_uniforms_3
+            }
+            has_journal_entry = GGGG_je_helmets_drab
+            has_technology_researched = bolt_action_rifles
+        }
+    }
+    
+    timeout = 3650
+}
+
+GGGG_je_helmets_drab = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    is_shown_when_inactive = {
+        NOT = {
+            has_variable = GGGG_has_uniforms_3
+        }
+        OR = {
+            can_research = trench_works
+            has_technology_researched = bolt_action_rifles
+        }
+        GGGG_sv_count_army_building_levels >= 5 # Ignore navy
+    }
+    
+    possible = {
+        has_technology_researched = trench_works
+    }
+    
+    immediate = {
+        ROOT = {
+            save_scope_as = target_country
+        }
+    }
+    
+    complete = {
+        custom_tooltip = {
+            text = GGGG_tt_helmets_drab_je
+            GGGG_sv_pm_usage_helmets_drab > GGGG_HELMETS_ADOPTION_THRESHOLD
+        }
+    }
+    
+    on_complete = {
+        trigger_event = {
+            id = GGGG_ev_uniforms.2
+        }
+    }
+    
+    timeout = 3650
+}

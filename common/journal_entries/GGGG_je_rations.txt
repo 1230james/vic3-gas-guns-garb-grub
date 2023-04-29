@@ -1,0 +1,86 @@
+﻿GGGG_je_canned_goods = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    is_shown_when_inactive = {
+        NOR = {
+            has_variable = GGGG_has_rations_3
+            has_variable = GGGG_has_rations_2
+        }
+        has_technology_researched = lathe
+        GGGG_sv_count_military_building_levels >= 5
+    }
+    
+    possible = {
+        has_technology_researched = canneries
+    }
+    
+    immediate = {
+        ROOT = {
+            save_scope_as = target_country
+        }
+    }
+    
+    complete = {
+        custom_tooltip = {
+            text = GGGG_tt_canned_goods_je
+            GGGG_sv_pm_usage_canned_rations > GGGG_CANNED_GOODS_ADOPTION_THRESHOLD
+        }
+    }
+    
+    on_complete = {
+        trigger_event = {
+            id = GGGG_ev_rations.1
+        }
+    }
+    
+    invalid = {
+        OR = {
+            hidden_trigger = {
+                has_variable = GGGG_has_rations_3
+            }
+            has_journal_entry = GGGG_je_refrigerated_produce
+        }
+    }
+    
+    timeout = 3650
+}
+
+GGGG_je_refrigerated_produce = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    is_shown_when_inactive = {
+        NOT = {
+            has_variable = GGGG_has_rations_3
+        }
+        OR = {
+            has_technology_researched = electrical_capacitors
+            has_technology_researched = vacuum_canning
+        }
+        GGGG_sv_count_military_building_levels >= 5
+    }
+    
+    possible = {
+        has_technology_researched = pasteurization
+    }
+    
+    immediate = {
+        ROOT = {
+            save_scope_as = target_country
+        }
+    }
+    
+    complete = {
+        custom_tooltip = {
+            text = GGGG_tt_refrigerated_je
+            GGGG_sv_pm_usage_refrigerated_rations > GGGG_REFRIGERATED_ADOPTION_THRESHOLD
+        }
+    }
+    
+    on_complete = {
+        trigger_event = {
+            id = GGGG_ev_rations.2
+        }
+    }
+    
+    timeout = 3650
+}

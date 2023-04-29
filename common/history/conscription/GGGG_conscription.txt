@@ -1,0 +1,192 @@
+﻿CONSCRIPTION = { # Separate section for conscription centers since for some reason it doesnt work in GLOBAL?
+    every_country = {
+        every_scope_state = {
+            # Set rations PM - pick most advanced
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_refrigerated_rations
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_refrigerated_rations
+                }
+            }
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_canned_rations
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_canned_rations
+                }
+            }
+            
+            # Set uniforms PM - pick most advanced
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_modern_uniform_consc
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_modern_uniform_consc
+                }
+            }
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_full_dress_consc
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_full_dress_consc
+                }
+            }
+            
+            # Set guns PM
+            # Follows same logic as found in GGGG_global.txt
+            
+            # Bolt actions - trench/squad/mech inf
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_bolt_actions
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_mechanized_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_squad_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_trench_infantry_conscription
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_bolt_actions
+                }
+            }
+            
+            # Repeaters - skirmish/trench/squad/mech
+            else_if = { # something something lame yandev joke
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_repeaters
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_mechanized_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_squad_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_trench_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_skirmish_infantry_conscription
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_repeaters
+                }
+            }
+            
+            # Caplocks ("rifles") - any but irregulars
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_caplocks
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_mechanized_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_squad_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_trench_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_skirmish_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_line_infantry_conscription
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_caplocks
+                }
+            }
+            
+            # Flintlocks ("muskets") - any but irregulars
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_conscription_center
+                        production_method = pm_GGGG_flintlocks
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_mechanized_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_squad_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_trench_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_skirmish_infantry_conscription
+                        }
+                        is_production_method_active = {
+                            building_type     = building_conscription_center
+                            production_method = pm_line_infantry_conscription
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_conscription_center
+                    production_method = pm_GGGG_flintlocks
+                }
+            }
+        }
+    }
+}

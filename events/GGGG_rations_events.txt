@@ -1,0 +1,269 @@
+﻿namespace = GGGG_ev_rations
+
+# Adopt canned rations
+GGGG_ev_rations.1 = {
+    type      = country_event
+    placement = root
+    
+    title     = GGGG_ev_rations_1_title
+    desc      = GGGG_ev_rations_1_desc
+    flavor    = GGGG_ev_rations_1_flavor
+
+    duration = 3
+
+    event_image = {
+        video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect  = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    trigger = {} # Triggered from journal entry
+    
+    immediate = {
+        set_variable = {
+            name  = GGGG_has_rations_2
+            value = yes
+        }
+    }
+    
+    option = { # Boost food industry throughput
+        name = GGGG_ev_rations_1_a
+        default_option = yes
+        
+        add_modifier = {
+            name   = GGGG_food_throughput_modifier
+            months = normal_modifier_time
+        }
+    }
+    
+    option = { # Can opener
+        name = GGGG_ev_rations_1_b
+        
+        trigger = {
+            NOT = {
+                has_variable = war_time_cans
+            }
+        }
+        
+        set_variable = {
+            name  = war_time_cans
+            value = yes
+        }
+        add_modifier = {
+            name       = GGGG_food_throughput_modifier
+            multiplier = 0.5
+            months     = normal_modifier_time
+        }
+        add_modifier = {
+            name       = modifier_developing_can_opener
+            multiplier = money_amount_multiplier_small
+            months     = normal_modifier_time
+        }
+    }
+    
+    option = { # Contribute to research towards pasteurization
+        name = GGGG_ev_rations_1_c
+        
+        trigger = {
+            NOT = {
+                has_technology_researched = pasteurization
+            }
+            
+            # Allow only if country has reached Era 4 in the prereqs leading to Pasteurization
+            # OR if any other country has researched it (basically just trying to represent if refrigeration is a
+            # feasible idea at the current point in time)
+            OR = {
+                AND = {
+                    has_technology_researched = vacuum_canning
+                    has_technology_researched = electrical_generation
+                }
+                any_country = {
+                    has_technology_researched = pasteurization
+                }
+            }
+        }
+        
+        if = { # Enclosure (Enclosure -> Shaft Mining -> Steelworking -> Mechanical Tools -> ...)
+            limit = {
+                can_research = enclosure
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = enclosure
+            }
+        }
+        else_if = { # Shaft Mining
+            limit = {
+                can_research = shaft_mining
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = shaft_mining
+            }
+        }
+        else_if = { # Steelworking
+            limit = {
+                can_research = steelworking
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = steelworking
+            }
+        }
+        else_if = { # Mechanical Tools (MT -> Mechanized Workshops - > Vacuum Canning -> ...)
+            limit = {
+                can_research = mechanical_tools
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = mechanical_tools
+            }
+        }
+        else_if = { # Mechanized Workshops
+            limit = {
+                can_research = mechanized_workshops
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = mechanized_workshops
+            }
+        }
+        else_if = { # Atmospheric Engine (AE -> Water-tube Boiler -> Rotary Valve Engine -> ...)
+            limit = {
+                can_research = atmospheric_engine
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = atmospheric_engine
+            }
+        }
+        else_if = { # Water-tube Boiler
+            limit = {
+                can_research = watertube_boiler
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = watertube_boiler
+            }
+        }
+        else_if = { # Vacuum Canning (VC -> Pasteurization)
+            limit = {
+                can_research = vacuum_canning
+            }
+            add_technology_progress = {
+                progress   = 4500
+                technology = vacuum_canning
+            }
+        }
+        else_if = { # Rotary Valve Engine (RVE -> Electrical Generation -> Electrical Capacitors -> ...)
+            limit = {
+                can_research = rotary_valve_engine
+            }
+            add_technology_progress = {
+                progress   = 4500
+                technology = rotary_valve_engine
+            }
+        }
+        else_if = { # Electrical Generation
+            limit = {
+                can_research = electrical_generation
+            }
+            add_technology_progress = {
+                progress   = 4500
+                technology = electrical_generation
+            }
+        }
+        else_if = { # Electrical Capacitors (EC -> Pasteurization)
+            limit = {
+                can_research = electrical_capacitors
+            }
+            add_technology_progress = {
+                progress   = 6000
+                technology = electrical_capacitors
+            }
+        }
+        else = { # Pasteurization
+            add_technology_progress = {
+                progress   = 6000
+                technology = pasteurization
+            }
+        }
+    }
+}
+
+# Adopt refrigerated rations
+GGGG_ev_rations.2 = {
+    type      = country_event
+    placement = root
+    
+    title     = GGGG_ev_rations_2_title
+    desc      = GGGG_ev_rations_2_desc
+    flavor    = GGGG_ev_rations_2_flavor
+
+    duration = 3
+
+    event_image = {
+        video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect  = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    trigger = {} # Triggered from journal entry
+    
+    immediate = {
+        set_variable = {
+            name  = GGGG_has_rations_3
+            value = yes
+        }
+    }
+    
+    option = { # Morale & recovery bonus
+        name = GGGG_ev_rations_2_a
+        default_option = yes
+        
+        add_modifier = {
+            name   = GGGG_fresh_rations_modifier
+            months = normal_modifier_time
+        }
+    }
+    
+    option = { # Boost food & agriculture industry throughput
+        name = GGGG_ev_rations_2_b
+        
+        add_modifier = {
+            name   = GGGG_produce_throughput_modifier
+            months = normal_modifier_time
+        }
+    }
+    
+    option = { # Can opener
+        name = GGGG_ev_rations_2_c
+        
+        trigger = {
+            NOT = {
+                has_variable = war_time_cans
+            }
+        }
+        
+        set_variable = {
+            name  = war_time_cans
+            value = yes
+        }
+        add_modifier = {
+            name       = GGGG_fresh_rations_modifier
+            multiplier = 0.5
+            months     = normal_modifier_time
+        }
+        add_modifier = {
+            name       = modifier_developing_can_opener
+            multiplier = money_amount_multiplier_small
+            months     = normal_modifier_time
+        }
+    }
+}

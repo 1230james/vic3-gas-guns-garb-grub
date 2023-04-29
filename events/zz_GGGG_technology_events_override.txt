@@ -1,0 +1,60 @@
+﻿namespace = technology_events
+
+technology_events.50 = {
+	type = country_event
+	placement = root
+
+	title = technology_events.50.t
+	desc = technology_events.50.d
+	flavor = technology_events.50.f
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/battlefield_trenches"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	trigger = {
+		has_technology_researched = canneries
+		NOT = {
+			has_variable = war_time_cans
+		}
+        OR = { # GGGG
+            GGGG_sv_pm_usage_canned_rations > 0
+            GGGG_sv_pm_usage_refrigerated_rations > 0
+        }
+	}
+
+	immediate = {
+		set_variable = {
+			name = war_time_cans
+			value = yes
+		}
+	}
+
+	option = { #yes
+		name = technology_events.50.a
+		add_modifier = {
+			name = modifier_developing_can_opener
+			multiplier = money_amount_multiplier_small
+			months = normal_modifier_time
+		}
+
+	}
+
+	option = { #no
+		name = technology_events.50.b
+		default_option = yes
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_can_anger
+				months = normal_modifier_time
+			}
+		}
+	}
+}

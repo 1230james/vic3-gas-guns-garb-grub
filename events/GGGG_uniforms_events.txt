@@ -1,0 +1,294 @@
+﻿namespace = GGGG_ev_uniforms
+
+# Adopt full dress
+GGGG_ev_uniforms.1 = {
+    type      = country_event
+    placement = root
+    
+    title     = GGGG_ev_uniforms_1_title
+    desc      = GGGG_ev_uniforms_1_desc
+    flavor    = GGGG_ev_uniforms_1_flavor
+
+    duration = 3
+
+    event_image = {
+        video = "gfx/event_pictures/unspecific_military_parade.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect  = "event:/SFX/Events/unspecific/military_parade"
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    trigger = {} # Triggered from journal entry
+    
+    immediate = {
+        set_variable = {
+            name  = GGGG_has_uniforms_2
+            value = yes
+        }
+    }
+    
+    option = { # Military parade
+        name = GGGG_ev_uniforms_1_a
+        
+        add_modifier = {
+            name       = GGGG_dress_modifier
+            multiplier = 0.5
+            months     = normal_modifier_time
+        }
+        ig:ig_armed_forces = {
+            add_modifier = {
+                name   = GGGG_parade_modifier
+                months = normal_modifier_time
+            }
+        }
+    }
+    
+    option = { # Prestige
+        name = GGGG_ev_uniforms_1_b
+        default_option = yes
+        
+        add_modifier = {
+            name   = GGGG_dress_modifier
+            months = normal_modifier_time
+        }
+    }
+    
+    option = { # Contribute to research towards trench works
+        name = GGGG_ev_uniforms_1_c
+        
+        trigger = {
+            NOT = {
+                has_technology_researched = trench_works
+            }
+            
+            # Allow conditions:
+            # Country can research Trench Works, OR
+            # Any country has researched Trench Works, OR
+            # Any country has researched Bolt-Action Rifle
+            #
+            # The idea is to represent pressing need for developing drab uniforms: obsolescence of line infantry
+            # eliminating the need for high-visibility uniforms & high-visibility uniforms making troops easy targets
+            # at range for soldiers equipped with modern rifles.
+            OR = {
+                can_research = trench_works
+                any_country = {
+                    OR = {
+                        has_technology_researched = trench_works
+                        has_technology_researched = bolt_action_rifles
+                    }
+                }
+            }
+        }
+        
+        if = { # Standing Army (SA -> Military Drill / Mandatory Service -> Line Infantry -> ...)
+            limit = {
+                can_research = standing_army
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = standing_army
+            }
+        }
+        else_if = { # Military Drill
+            limit = {
+                can_research = military_drill
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = military_drill
+            }
+        }
+        else_if = { # Mandatory Service
+            limit = {
+                can_research = mandatory_service
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = mandatory_service
+            }
+        }
+        else_if = { # Line Infantry (LI -> Army Reserves / Napoleonic Warfare -> Logistics / General Staff -> ...)
+            limit = {
+                can_research = line_infantry
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = line_infantry
+            }
+        }
+        else_if = { # Army Reserves
+            limit = {
+                can_research = army_reserves
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = army_reserves
+            }
+        }
+        else_if = { # Napoleonic Warfare
+            limit = {
+                can_research = napoleonic_warfare
+            }
+            add_technology_progress = {
+                progress   = 2500
+                technology = napoleonic_warfare
+            }
+        }
+        else_if = { # Logistics (Logi -> Electric Telegraph)
+            limit = {
+                can_research = logistics
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = logistics
+            }
+        }
+        else_if = { # General Staff (GS -> Trench Works)
+            limit = {
+                can_research = general_staff
+            }
+            add_technology_progress = {
+                progress   = 3500
+                technology = general_staff
+            }
+        }
+        else_if = { # Electric Telegraph (ET -> Trench Works)
+            limit = {
+                can_research = electric_telegraph
+            }
+            add_technology_progress = {
+                progress   = 4500
+                technology = electric_telegraph
+            }
+        }
+        else = { # Trench Works
+            add_technology_progress = {
+                progress   = 6000
+                technology = trench_works
+            }
+        }
+    }
+}
+
+# Adopt helmets & drab
+GGGG_ev_uniforms.2 = {
+    type      = country_event
+    placement = root
+    
+    title     = GGGG_ev_uniforms_2_title
+    desc      = GGGG_ev_uniforms_2_desc
+    flavor    = GGGG_ev_uniforms_2_flavor
+
+    duration = 3
+
+    event_image = {
+        video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect  = "event:/SFX/Events/europenorthamerica/before_the_battle"
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    trigger = {} # Triggered from journal entry
+    
+    immediate = {
+        set_variable = {
+            name  = GGGG_has_uniforms_3
+            value = yes
+        }
+    }
+    
+    option = { # Procurement focus
+        name = GGGG_ev_uniforms_2_a
+        default_option = yes
+        
+        add_modifier = {
+            name   = GGGG_helmets_throughput_modifier
+            months = normal_modifier_time
+        }
+    }
+    
+    option = { # Research: Military Statistics
+        name = GGGG_ev_uniforms_2_b
+        
+        trigger = {
+            can_research = military_statistics
+        }
+        
+        add_technology_progress = {
+            progress   = 4500
+            technology = military_statistics
+        }
+    }
+    
+    option = { # Research: Concrete Fortifications
+        name = GGGG_ev_uniforms_2_c
+        
+        trigger = {
+            OR = {
+                can_research = defense_in_depth
+                can_research = concrete_fortifications
+            }
+        }
+        
+        if = {
+            limit = {
+                can_research = defense_in_depth
+            }
+            add_technology_progress = {
+                progress   = 6000
+                technology = defense_in_depth
+            }
+        }
+        else = {
+            add_technology_progress = {
+                progress   = 8000
+                technology = concrete_fortifications
+            }
+        }
+    }
+    
+    option = { # Research: Mobile Armor
+        name = GGGG_ev_uniforms_2_d
+        
+        trigger = {
+            OR = {
+                can_research = nco_training
+                can_research = military_aviation
+                can_research = mobile_armor
+            }
+            OR = {
+                has_technology_researched = military_statistics
+                has_technology_researched = concrete_fortifications
+            }
+        }
+        
+        if = { # NCO Training (NCOT -> Mo. A)
+            limit = {
+                can_research = nco_training
+            }
+            add_technology_progress = {
+                progress   = 8000
+                technology = nco_training
+            }
+        }
+        else_if = { # Military Aviation (Mi. A -> Mo. A)
+            limit = {
+                can_research = military_aviation
+            }
+            add_technology_progress = {
+                progress   = 8000
+                technology = military_aviation
+            }
+        }
+        else = { # Mobile Armor
+            add_technology_progress = {
+                progress   = 8000
+                technology = mobile_armor
+            }
+        }
+    }
+}

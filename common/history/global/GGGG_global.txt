@@ -1,0 +1,283 @@
+﻿GLOBAL = {
+    # Set GGGG flag - for use in other mods for compatibility checks
+    set_global_variable = {
+        name  = GGGG_is_active
+        value = yes
+    }
+    
+    # Default PMs
+    every_country = {
+        every_scope_state = {
+            # Set rations PM - pick most advanced
+            if = {
+                limit = {
+                    OR = {
+                        can_activate_production_method = {
+                            building_type     = building_barracks
+                            production_method = pm_GGGG_refrigerated_rations
+                        }
+                        can_activate_production_method = {
+                            building_type     = building_naval_base
+                            production_method = pm_GGGG_refrigerated_rations
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_refrigerated_rations
+                }
+                activate_production_method = {
+                    building_type     = building_naval_base
+                    production_method = pm_GGGG_refrigerated_rations
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_rations_3
+                        value = yes
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        can_activate_production_method = {
+                            building_type     = building_barracks
+                            production_method = pm_GGGG_canned_rations
+                        }
+                        can_activate_production_method = {
+                            building_type     = building_naval_base
+                            production_method = pm_GGGG_canned_rations
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_canned_rations
+                }
+                activate_production_method = {
+                    building_type     = building_naval_base
+                    production_method = pm_GGGG_canned_rations
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_rations_2
+                        value = yes
+                    }
+                }
+            }
+            
+            # Set uniforms PM - pick most advanced
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_modern_uniform
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_modern_uniform
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_uniforms_3
+                        value = yes
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_full_dress
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_full_dress
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_uniforms_2
+                        value = yes
+                    }
+                }
+            }
+            
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_naval_base
+                        production_method = pm_GGGG_modern_uniform_navy
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_naval_base
+                    production_method = pm_GGGG_modern_uniform_navy
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_uniforms_3
+                        value = yes
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_naval_base
+                        production_method = pm_GGGG_full_dress_navy
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_naval_base
+                    production_method = pm_GGGG_full_dress_navy
+                }
+                prev = {
+                    set_variable = {
+                        name  = GGGG_has_uniforms_2
+                        value = yes
+                    }
+                }
+            }
+            
+            # Set guns PM
+            # Set based primarily on most advanced but factor in organization PM to try to gauge appropriate economic
+            # development (to avoid, for example, forcing countries with gunsmithing unlocked but only irregulars to
+            # use muskets that they probably do not produce at the start of the game, crippling their economy and
+            # forcing an equipment change at the start of the game)
+            
+            # Bolt actions - trench/squad/mech inf
+            if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_bolt_actions
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_mechanized_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_squad_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_trench_infantry
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_bolt_actions
+                }
+            }
+            
+            # Repeaters - skirmish/trench/squad/mech
+            else_if = { # something something lame yandev joke
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_repeaters
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_mechanized_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_squad_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_trench_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_skirmish_infantry
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_repeaters
+                }
+            }
+            
+            # Caplocks ("rifles") - any but irregulars
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_caplocks
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_mechanized_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_squad_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_trench_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_skirmish_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_line_infantry
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_caplocks
+                }
+            }
+            
+            # Flintlocks ("muskets") - any but irregulars
+            else_if = {
+                limit = {
+                    can_activate_production_method = {
+                        building_type     = building_barracks
+                        production_method = pm_GGGG_flintlocks
+                    }
+                    OR = {
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_mechanized_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_squad_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_trench_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_skirmish_infantry
+                        }
+                        is_production_method_active = {
+                            building_type     = building_barracks
+                            production_method = pm_line_infantry
+                        }
+                    }
+                }
+                activate_production_method = {
+                    building_type     = building_barracks
+                    production_method = pm_GGGG_flintlocks
+                }
+            }
+        }
+    }
+}
