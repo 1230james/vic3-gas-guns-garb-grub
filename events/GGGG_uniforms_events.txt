@@ -255,29 +255,14 @@ GGGG_ev_uniforms.2 = {
         name = GGGG_ev_uniforms_2_d
         
         trigger = {
-            NOT = {
-                has_technology_researched = mobile_armor
-            }
-            NOT = { # Hide option if the only prereq path needed is the concrete forts one since we already have that covered
-                AND = { # This AND is necessary
-                    has_technology_researched = military_aviation
-                    has_technology_researched = nco_training
-                    NOT = {
-                        has_technology_researched = concrete_fortifications
-                    }
-                }
+            OR = {
+                can_research = nco_training
+                can_research = military_aviation
+                can_research = mobile_armor
             }
             OR = {
                 has_technology_researched = military_statistics
-                NOT = { # Also hide if not having military stats is holding us up since we already have that covered too
-                    AND = {
-                        has_technology_researched = concrete_fortifications
-                        has_technology_researched = military_aviation
-                        NOT = {
-                            has_technology_researched = military_statistics
-                        }
-                    }
-                }
+                has_technology_researched = concrete_fortifications
             }
         }
         

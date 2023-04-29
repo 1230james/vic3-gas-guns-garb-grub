@@ -57,8 +57,7 @@ GGGG_je_helmets_drab = {
             has_variable = GGGG_has_uniforms_3
         }
         OR = {
-            has_technology_researched = general_staff
-            has_technology_researched = electric_telegraph
+            can_research = trench_works
             has_technology_researched = bolt_action_rifles
         }
         GGGG_sv_count_army_building_levels >= 5 # Ignore navy
