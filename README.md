@@ -10,12 +10,12 @@ For Victoria 3
 
 Adjustments to existing production methods include the aforementioned decoupling of firearms technology from the infantry organization production methods, as well as adjusting all navy production methods to include coal and oil usage to better represent the cost of operation of more advanced warships sailing under power.
 
-For more information, visit the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2951960564)!
+For more information, visit the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2968644620)!
 
 ## Installation
 
-1. Install via [Steam Workshop](), OR
+1. Install via [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2968644620), OR
 
-2. Install via [Paradox Mods](), OR
+2. Install via [Paradox Mods](https://mods.paradoxplaza.com/mods/61232/Any), OR
 
 3. Clone this repository and install into the Vic3 mods folder manually.
