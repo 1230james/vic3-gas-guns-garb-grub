@@ -17,8 +17,8 @@ pm_GGGG_flintlocks = {
         }
 
         throughput_scaled = {
-            unit_offense_add = 5
-            unit_defense_add = 5
+            unit_offense_add = 10
+            unit_defense_add = 10
         }
         
         unscaled = {
@@ -55,8 +55,8 @@ pm_GGGG_caplocks = {
         }
 
         throughput_scaled = {
-            unit_offense_add = 10
-            unit_defense_add = 10
+            unit_offense_add = 20
+            unit_defense_add = 20
         }
 
         unscaled = {
@@ -93,12 +93,12 @@ pm_GGGG_repeaters = {
         }
 
         throughput_scaled = {
-            unit_offense_add = 15
-            unit_defense_add = 15
+            unit_offense_add = 30
+            unit_defense_add = 30
         }
 
         unscaled = {
-            unit_kill_rate_add = 0.06
+            unit_kill_rate_add = 0.12
         }
     }
     
@@ -131,12 +131,12 @@ pm_GGGG_bolt_actions = {
         }
 
         throughput_scaled = {
-            unit_offense_add = 20
-            unit_defense_add = 20
+            unit_offense_add = 40
+            unit_defense_add = 40
         }
 
         unscaled = {
-            unit_kill_rate_add = 0.08
+            unit_kill_rate_add = 0.15
         }
     }
     

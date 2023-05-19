@@ -19,3 +19,9 @@ For more information, visit the [Steam Workshop page](https://steamcommunity.com
 2. Install via [Paradox Mods](https://mods.paradoxplaza.com/mods/61232/Any), OR
 
 3. Clone this repository and install into the Vic3 mods folder manually.
+
+## Compatibility Considerations
+
+The most likely point of conflict between 4G and other mods will be the changes to GUIs this mod makes. If you are trying to create a compatibility patch with another mod, all changes made in vanilla .gui files should be marked with a "GGGG" comment.
+
+For ease of checking if this mod is active, 4G adds a global variable of boolean type named `GGGG_is_active`. It will always evaluate to true (`yes`) if this mod is active.

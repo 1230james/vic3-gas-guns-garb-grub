@@ -1,0 +1,23 @@
+﻿troop_name = {
+	type = building
+	random_valid = no
+	
+	text = {
+		trigger = {
+			is_building_type = building_barracks
+		}
+		localization_key = troop_name_regular
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = troop_name_conscript
+	}
+    text = { # GGGG - Fix for naval bases
+		trigger = {
+			is_building_type = building_naval_base
+		}
+		localization_key = combat_unit_flotilla
+	}
+}
