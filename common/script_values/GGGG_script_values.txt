@@ -164,3 +164,30 @@ GGGG_sv_pm_usage_helmets_drab = {
     }
     divide = GGGG_sv_count_army_building_levels
 }
+
+GGGG_sv_pm_usage_helmets_drab_caps_coats = { # Not used by this mod, but made available for third parties
+    value = 0
+    every_scope_building = {
+        if = {
+            limit = {
+                OR = {
+                    is_building_type = building_barracks
+                    is_building_type = building_conscription_center
+                    is_building_type = building_naval_base
+                }
+            }
+            
+            if = {
+                limit = {
+                    OR = {
+                        has_active_production_method = pm_GGGG_modern_uniform
+                        has_active_production_method = pm_GGGG_modern_uniform_consc
+                        has_active_production_method = pm_GGGG_modern_uniform_navy
+                    }
+                }
+                add = level
+            }
+        }
+    }
+    divide = GGGG_sv_count_military_building_levels
+}
