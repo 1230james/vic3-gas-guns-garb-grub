@@ -1,0 +1,14 @@
+﻿# USAGE:
+# Paste into a scripted_trigger file with a filename that comes ahead of this one in an alphanumeric sort (i.e. don't
+# make it start with z) the following definition:
+#
+# GGGG_is_active_trigger = {
+#     always = no
+# }
+#
+# If GGGG is inactive, that trigger definition should be the one used by your mod, but if GGGG is active, it should be
+# overwritten with the definition below, allowing you to tell when GGGG is active or not dynamically.
+
+GGGG_is_active_trigger = {
+    always = yes
+}

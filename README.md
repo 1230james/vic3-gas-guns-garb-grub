@@ -24,4 +24,4 @@ For more information, visit the [Steam Workshop page](https://steamcommunity.com
 
 The most likely point of conflict between 4G and other mods will be the changes to GUIs this mod makes. If you are trying to create a compatibility patch with another mod, all changes made in vanilla .gui files should be marked with a "GGGG" comment.
 
-For ease of checking if this mod is active, 4G adds a global variable of boolean type named `GGGG_is_active`. It will always evaluate to true (`yes`) if this mod is active.
+For ease of checking if this mod is active, 4G provides a scripted trigger of boolean type named `GGGG_is_active`. It will always evaluate to true (`yes`) if this mod is active. Please read the comment in [this file](https://github.com/1230james/vic3-gas-guns-garb-grub/blob/master/common/scripted_triggers/zz_GGGG_active_trigger.txt) for more usage notes.

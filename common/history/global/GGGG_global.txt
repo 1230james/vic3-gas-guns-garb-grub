@@ -1,10 +1,4 @@
 ﻿GLOBAL = {
-    # Set GGGG flag - for use in other mods for compatibility checks
-    set_global_variable = {
-        name  = GGGG_is_active
-        value = yes
-    }
-    
     # Default PMs
     every_country = {
         every_scope_state = {
