@@ -885,7 +885,7 @@ types production_methods
                                 
                                 button = {
                                     visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
-                                    using = expand_button_bg_no_fade
+                                    using = expand_button_bg_dropdown
                                     size = { 100% 100% }
                                     onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
                                 }
