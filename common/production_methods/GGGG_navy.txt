@@ -260,6 +260,7 @@ pm_submarine = {
         }
 
         level_scaled = {
+            building_training_rate_add = -1
         }
 
         throughput_scaled = {
@@ -268,7 +269,6 @@ pm_submarine = {
         }
 
         unscaled = {
-            building_training_rate_add = -5
             unit_convoy_raiding_mult = 0.5
         }
     }
@@ -311,13 +311,14 @@ pm_destroyers = {
         }
 
         throughput_scaled = {
-            unit_offense_add = 10
-            unit_defense_add = 20
+            unit_offense_add = 5
+            unit_defense_add = 10
         }
 
         unscaled = {
             unit_morale_loss_mult = -0.1
-#            todo: unit_convoy_defence_mult = 0.25
+            unit_convoy_raiding_interception_mult = 0.25
+            unit_convoy_defense_mult = 0.5
         }
     }
 
@@ -344,17 +345,18 @@ pm_carriers = {
         }
 
         level_scaled = {
+            building_training_rate_add = -2
         }
 
         throughput_scaled = {
-            unit_offense_add = 30
-            unit_defense_add = 40
+            unit_offense_add = 20
+            unit_defense_add = 30
         }
 
         unscaled = {
-            building_training_rate_add = -10
             unit_morale_loss_mult = -0.25
-#            todo: unit_convoy_defence_mult = 0.25
+            unit_convoy_raiding_interception_mult = 0.5
+            unit_convoy_defense_mult = 0.5
         }
     }
 
@@ -368,4 +370,3 @@ pm_carriers = {
         pm_offense_defense_readjustment_minor
     }
 }
-
