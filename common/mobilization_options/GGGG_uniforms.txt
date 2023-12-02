@@ -1,0 +1,106 @@
+﻿GGGG_mo_traditional_uniforms = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_jeollip.dds"
+    group   = GGGG_mog_uniforms
+    
+    possible = {
+        always = yes
+    }
+    
+    can_be_turned_off = {
+        always = no
+    }
+    
+    upkeep_modifier = {
+        goods_input_clothes_add = 0.5
+    }
+    
+    unit_modifier = {
+        dummy_modifier_type = 0
+    }
+    
+    ai_weight = {
+        value = 1
+    }
+}
+
+GGGG_mo_full_dress = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_shako.dds"
+    group   = GGGG_mog_uniforms
+    
+    possible = {
+        scope:military_formation = {
+            NOT = {
+                has_mobilization_option = mobilization_option:GGGG_mo_modern_uniform
+            }
+        }
+    }
+    
+    on_activate_while_mobilized = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
+            add_organization = {
+                value = organization
+                multiply = -0.25
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        line_infantry
+    }
+    
+    upkeep_modifier = {
+        goods_input_luxury_clothes_add = 0.5
+    }
+    
+    unit_modifier = {
+        unit_offense_add        =  5
+        unit_morale_damage_mult =  0.10
+        unit_recovery_rate_add  = -0.10
+    }
+    
+    ai_weight = {
+        value = 2
+    }
+}
+
+GGGG_mo_modern_uniform = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_brodie.dds"
+    group   = GGGG_mog_uniforms
+    
+    possible = {
+        scope:military_formation = {
+            NOT = {
+                has_mobilization_option = mobilization_option:GGGG_mo_full_dress
+            }
+        }
+    }
+    
+    on_activate_while_mobilized = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
+            add_organization = {
+                value = organization
+                multiply = -0.25
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        trench_works
+    }
+    
+    upkeep_modifier = {
+        goods_input_clothes_add = 0.5
+        goods_input_steel_add   = 0.1
+    }
+    
+    unit_modifier = {
+        unit_defense_add       = 10
+        unit_recovery_rate_add = 0.10
+    }
+    
+    ai_weight = {
+        value = 3
+    }
+}
