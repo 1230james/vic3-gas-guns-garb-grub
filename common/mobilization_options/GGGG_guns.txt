@@ -85,6 +85,14 @@ GGGG_mo_percussion_caps = {
         }
     }
     
+    can_be_turned_off = {
+        scope:military_formation = {
+            NOT = {
+                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+            }
+        }
+    }
+    
     on_activate = {
         custom_tooltip = {
             text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -125,7 +133,7 @@ GGGG_mo_percussion_caps = {
 }
 
 GGGG_mo_rifling = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_caplocks.dds"
+    texture = "gfx/interface/icons/production_method_icons/GGGG_rifling.dds"
     group   = GGGG_mog_guns
     
     possible = {
