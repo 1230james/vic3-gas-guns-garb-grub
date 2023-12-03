@@ -1,0 +1,399 @@
+﻿GGGG_mo_melee_weapons = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_pikehead.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        always = yes
+    }
+    
+    can_be_turned_off = {
+        always = no
+    }
+    
+    unit_modifier = {
+        unit_offense_mult  = -0.25
+        unit_defense_mult  = -0.25
+        unit_kill_rate_add = -0.10
+    }
+    
+    ai_weight = {
+        value = 1
+    }
+}
+
+GGGG_mo_firearms = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_flintlocks.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        market ?= {
+            mg:small_arms ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+    }
+    
+    can_be_turned_off = {
+        scope:military_formation = {
+            NOR = {
+                has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
+                has_mobilization_option = mobilization_option:GGGG_mo_rifling
+                has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
+                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+            }
+        }
+    }
+    
+    on_activate = {
+        if = { # Allow free changes during first week of game so AI can pick for themselves what they want
+            limit = { # b/c otherwise we have to overwrite vanilla military formation histories
+                game_date >= 1836.1.8
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
+            }
+        }
+    }
+    
+    on_deactivate = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+            add_organization = {
+                value = organization
+                multiply = -0.5
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        gunsmithing
+    }
+    
+    upkeep_modifier = {
+        goods_input_small_arms_add = 0.5
+    }
+    
+    unit_modifier = { # Cancel out effects of melee weapons
+        unit_offense_mult  = 0.25
+        unit_defense_mult  = 0.25
+        unit_kill_rate_add = 0.10
+    }
+    
+    ai_weight = {
+        value = 10 # Very important
+        if = {
+            limit = {
+                market ?= {
+                    mg:small_arms ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            multiply = 10
+        }
+    }
+}
+
+GGGG_mo_percussion_caps = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_caplocks.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        scope:military_formation = {
+            has_mobilization_option = mobilization_option:GGGG_mo_firearms
+        }
+        market ?= {
+            mg:ammunition ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+    }
+    
+    can_be_turned_off = {
+        scope:military_formation = {
+            NOT = {
+                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+            }
+        }
+    }
+    
+    on_activate = {
+        if = {
+            limit = {
+                game_date >= 1836.1.8
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
+            }
+        }
+    }
+    
+    on_deactivate = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+            add_organization = {
+                value = organization
+                multiply = -0.5
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        percussion_cap
+    }
+    
+    upkeep_modifier = {
+        goods_input_ammunition_add = 0.5
+    }
+    
+    unit_modifier = {
+        unit_offense_add   = 5
+        unit_defense_add   = 5
+        unit_kill_rate_add = 0.03
+    }
+    
+    ai_weight = {
+        value = 1
+        if = {
+            limit = {
+                market ?= {
+                    mg:ammunition ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            multiply = 10
+        }
+    }
+}
+
+GGGG_mo_rifling = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_rifling.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        scope:military_formation = {
+            has_mobilization_option = mobilization_option:GGGG_mo_firearms
+        }
+    }
+    
+    on_activate = {
+        if = {
+            limit = {
+                game_date >= 1836.1.8
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
+            }
+        }
+    }
+    
+    on_deactivate = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+            add_organization = {
+                value = organization
+                multiply = -0.5
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        rifling
+    }
+    
+    upkeep_modifier_unscaled = {
+        goods_input_small_arms_mult = 0.05
+    }
+    
+    unit_modifier = {
+        unit_offense_add   = 5
+        unit_defense_add   = 5
+        unit_kill_rate_add = 0.03
+    }
+    
+    ai_weight = {
+        value = 1
+        if = {
+            limit = {
+                market ?= {
+                    mg:small_arms ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            multiply = 10
+        }
+    }
+}
+
+GGGG_mo_breechblocks = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_repeaters.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        scope:military_formation = {
+            has_mobilization_option = mobilization_option:GGGG_mo_firearms
+        }
+    }
+    
+    can_be_turned_off = {
+        scope:military_formation = {
+            NOT = {
+                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+            }
+        }
+    }
+    
+    on_activate = {
+        if = {
+            limit = {
+                game_date >= 1836.1.8
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
+            }
+        }
+    }
+    
+    on_deactivate = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+            add_organization = {
+                value = organization
+                multiply = -0.5
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        repeaters
+    }
+    
+    upkeep_modifier_unscaled = {
+        goods_input_small_arms_mult = 0.10
+        goods_input_ammunition_mult = 0.10
+    }
+    
+    unit_modifier = {
+        unit_offense_add   = 10
+        unit_defense_add   = 10
+        unit_kill_rate_add = 0.05
+    }
+    
+    ai_weight = {
+        value = 1
+        if = {
+            limit = {
+                market ?= {
+                    mg:small_arms ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            add = 5
+        }
+        if = {
+            limit = {
+                market ?= {
+                    mg:ammunition ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            add = 5
+        }
+    }
+}
+
+GGGG_mo_bolt_actions = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_bolt_actions.dds"
+    group   = GGGG_mog_guns
+    
+    possible = {
+        scope:military_formation = {
+            has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
+            has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
+        }
+    }
+    
+    on_activate = {
+        if = {
+            limit = {
+                game_date >= 1836.1.8
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
+            }
+        }
+    }
+    
+    on_deactivate = {
+        custom_tooltip = {
+            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+            add_organization = {
+                value = organization
+                multiply = -0.5
+            }
+        }
+    }
+    
+    unlocking_technologies = {
+        bolt_action_rifles
+    }
+    
+    upkeep_modifier_unscaled = {
+        goods_input_small_arms_mult = 0.10
+        goods_input_ammunition_mult = 0.10
+    }
+    
+    unit_modifier = {
+        unit_offense_add   = 10
+        unit_defense_add   = 10
+        unit_kill_rate_add = 0.05
+    }
+    
+    ai_weight = {
+        value = 1
+        if = {
+            limit = {
+                market ?= {
+                    mg:small_arms ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            add = 5
+        }
+        if = {
+            limit = {
+                market ?= {
+                    mg:ammunition ?= {
+                        market_goods_pricier < 0.05
+                    }
+                }
+            }
+            add = 5
+        }
+    }
+}

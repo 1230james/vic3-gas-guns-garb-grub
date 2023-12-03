@@ -1,0 +1,23 @@
+﻿# Moves wine from lux. supplies option to supplement
+GGGG_mo_wine = {
+	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+
+	possible = {
+		market ?= {
+			mg:wine ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_wine_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
