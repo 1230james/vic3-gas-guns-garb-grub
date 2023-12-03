@@ -16,6 +16,9 @@
     GGGG_mo_wine_desc: "Helps to unwind."
     
     # Gun MOs
+    # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
+    # weird vanilla issue where auto separation of the modifiers list and the description text doesn't happen with the
+    # multipliers modifier types.
     GGGG_mo_melee_weapons:   "Melee Weapons"
     GGGG_mo_firearms:        "Firearms"
     GGGG_mo_percussion_caps: "$percussion_caps$"
@@ -29,11 +32,11 @@
     
     GGGG_mo_percussion_caps_desc: "Our guns and ammunition will be upgraded to use percussion caps, making our weapons more reliable in rough conditions.\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_rifling_desc:         "Etched grooves in our gun barrels imparting a spin on the projectile will make our guns more accurate and lethal at farther ranges.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_rifling_desc:         "\n\nEtched grooves in our gun barrels imparting a spin on the projectile will make our guns more accurate and lethal at farther ranges.\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_breechblocks_desc:    "Reliable breechblocks keep the breech tightly sealed for firing while also allowing our soldiers to load the gun much more quickly through the breech.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_breechblocks_desc:    "\n\nReliable breechblocks keep the breech tightly sealed for firing while also allowing our soldiers to load the gun much more quickly through the breech.\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_bolt_actions_desc:    "Well-designed firearm actions allow a soldier to extract a discharged round and load a new one in a single swift movement by means of a bolt handle.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_bolt_actions_desc:    "\n\nWell-designed firearm actions allow a soldier to extract a discharged round and load a new one in a single swift movement by means of a bolt handle.\n\n$GGGG_txt_GGGG_feature$"
     
     # Rations MOs
     GGGG_mo_foraged_rations:      "Local Foraging"

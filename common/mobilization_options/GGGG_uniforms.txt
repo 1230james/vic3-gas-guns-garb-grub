@@ -33,6 +33,11 @@ GGGG_mo_full_dress = {
                 has_mobilization_option = mobilization_option:GGGG_mo_modern_uniform
             }
         }
+        market ?= {
+            mg:luxury_clothes ?= {
+                market_goods_sell_orders > 0
+            }
+        }
     }
     
     on_activate_while_mobilized = {
@@ -83,6 +88,11 @@ GGGG_mo_modern_uniform = {
         scope:military_formation = {
             NOT = {
                 has_mobilization_option = mobilization_option:GGGG_mo_full_dress
+            }
+        }
+        market ?= {
+            mg:steel ?= {
+                market_goods_sell_orders > 0
             }
         }
     }

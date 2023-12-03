@@ -25,6 +25,14 @@ GGGG_mo_firearms = {
     texture = "gfx/interface/icons/production_method_icons/GGGG_flintlocks.dds"
     group   = GGGG_mog_guns
     
+    possible = {
+        market ?= {
+            mg:small_arms ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+    }
+    
     can_be_turned_off = {
         scope:military_formation = {
             NOR = {
@@ -97,6 +105,11 @@ GGGG_mo_percussion_caps = {
     possible = {
         scope:military_formation = {
             has_mobilization_option = mobilization_option:GGGG_mo_firearms
+        }
+        market ?= {
+            mg:ammunition ?= {
+                market_goods_sell_orders > 0
+            }
         }
     }
     

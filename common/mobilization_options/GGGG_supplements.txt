@@ -10,7 +10,7 @@ GGGG_mo_wine = {
 		}
 	}
 	upkeep_modifier = {
-		goods_input_wine_add = 1
+		goods_input_wine_add = 0.5
 	}
 	unit_modifier = {
 		unit_morale_recovery_mult = 0.1
