@@ -9,11 +9,10 @@ technology_events.50 = {
 	flavor = technology_events.50.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+		video = "middleeast_battlefield_trenches"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/battlefield_trenches"
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
@@ -25,8 +24,8 @@ technology_events.50 = {
 			has_variable = war_time_cans
 		}
         OR = { # GGGG
-            GGGG_sv_pm_usage_canned_rations > 0
-            GGGG_sv_pm_usage_refrigerated_rations > 0
+            GGGG_sv_mo_usage_canned_rations > 0
+            GGGG_sv_mo_usage_refrigerated_rations > 0
         }
 	}
 

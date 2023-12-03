@@ -1,193 +1,108 @@
-﻿# idk how to do this with only one iteration :(
-GGGG_sv_count_military_buildings = {
-    value = 0
-    
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            add = 1
-        }
+﻿GGGG_sv_count_military_building_levels = {
+    every_military_formation = {
+        add = num_units
     }
-    
-    # Crude DIV/0 guard - safe to do because if # of military buildings is 0 then the # of them using any of the PMs
-    # this script_value is used to calculate the usage ratio for will also be 0
-    min = 1
-}
-
-GGGG_sv_count_military_building_levels = {
-    value = 0
-    
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            add = level
-        }
-    }
-    
-    # DIV/0 guard
-    min = 1
 }
 
 GGGG_sv_count_army_building_levels = {
-    value = 0
-    
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                }
-            }
-            
-            add = level
+    every_military_formation = {
+        limit = {
+            is_army = yes
         }
+        add = num_units
     }
-    
-    # DIV/0 guard
-    min = 1
 }
 
 # ==================================================================================================================== #
 
-GGGG_sv_pm_usage_canned_rations = {
-    # Count PM usage
+GGGG_sv_mo_usage_canned_rations = {
     value = 0
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            if = {
-                limit = {
-                    has_active_production_method = pm_GGGG_canned_rations
-                }
-                add = level
-            }
+    
+    every_military_formation = {
+        limit = {
+            is_army = yes
+            has_mobilization_option = mobilization_option:GGGG_mo_canned_rations
         }
+        add = num_units
     }
     
-    # Turn into ratio
-    divide = GGGG_sv_count_military_building_levels
+    divide = {
+        every_military_formation = {
+            limit = {
+                is_army = yes
+            }
+            add = num_units
+        }
+        min = 1 # DIV/0 guard
+    }
 }
 
-GGGG_sv_pm_usage_refrigerated_rations = {
+GGGG_sv_mo_usage_refrigerated_rations = {
     value = 0
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            if = {
-                limit = {
-                    has_active_production_method = pm_GGGG_refrigerated_rations
-                }
-                add = level
-            }
+    
+    every_military_formation = {
+        limit = {
+            is_army = yes
+            has_mobilization_option = mobilization_option:GGGG_mo_refrigerated_rations
         }
+        add = num_units
     }
-    divide = GGGG_sv_count_military_building_levels
+    
+    divide = {
+        every_military_formation = {
+            limit = {
+                is_army = yes
+            }
+            add = num_units
+        }
+        min = 1 # DIV/0 guard
+    }
 }
 
-GGGG_sv_pm_usage_full_dress = {
+GGGG_sv_mo_usage_full_dress = {
     value = 0
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            if = {
-                limit = {
-                    OR = {
-                        has_active_production_method = pm_GGGG_full_dress
-                        has_active_production_method = pm_GGGG_full_dress_consc
-                        has_active_production_method = pm_GGGG_full_dress_navy
-                    }
-                }
-                add = level
-            }
+    
+    every_military_formation = {
+        limit = {
+            is_army = yes
+            has_mobilization_option = mobilization_option:GGGG_mo_full_dress
         }
+        add = num_units
     }
-    divide = GGGG_sv_count_military_building_levels
+    
+    divide = {
+        every_military_formation = {
+            limit = {
+                is_army = yes
+            }
+            add = num_units
+        }
+        min = 1 # DIV/0 guard
+    }
 }
 
-GGGG_sv_pm_usage_helmets_drab = {
+GGGG_sv_mo_usage_helmets_drab = {
     value = 0
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                }
-            }
-            
-            if = {
-                limit = {
-                    OR = {
-                        has_active_production_method = pm_GGGG_modern_uniform
-                        has_active_production_method = pm_GGGG_modern_uniform_consc
-                    }
-                }
-                add = level
-            }
+    
+    every_military_formation = {
+        limit = {
+            is_army = yes
+            has_mobilization_option = mobilization_option:GGGG_mo_modern_uniform
         }
+        add = num_units
     }
-    divide = GGGG_sv_count_army_building_levels
+    
+    divide = {
+        every_military_formation = {
+            limit = {
+                is_army = yes
+            }
+            add = num_units
+        }
+        min = 1 # DIV/0 guard
+    }
 }
 
-GGGG_sv_pm_usage_helmets_drab_caps_coats = { # Not used by this mod, but made available for third parties
-    value = 0
-    every_scope_building = {
-        if = {
-            limit = {
-                OR = {
-                    is_building_type = building_barracks
-                    is_building_type = building_conscription_center
-                    is_building_type = building_naval_base
-                }
-            }
-            
-            if = {
-                limit = {
-                    OR = {
-                        has_active_production_method = pm_GGGG_modern_uniform
-                        has_active_production_method = pm_GGGG_modern_uniform_consc
-                        has_active_production_method = pm_GGGG_modern_uniform_navy
-                    }
-                }
-                add = level
-            }
-        }
-    }
-    divide = GGGG_sv_count_military_building_levels
+GGGG_sv_mo_usage_helmets_drab_caps_coats = { # Not used by this mod, but made available for third parties
+    add = GGGG_sv_mo_usage_helmets_drab # As of v2.0.0 for Vic3 1.5, functionally equivalent
 }

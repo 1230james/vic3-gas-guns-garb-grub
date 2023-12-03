@@ -1,6 +1,8 @@
 ﻿GGGG_je_full_dress = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     
+    group = je_group_technology
+    
     is_shown_when_inactive = {
         NOR = {
             has_variable = GGGG_has_uniforms_3
@@ -26,7 +28,7 @@
     complete = {
         custom_tooltip = {
             text = GGGG_tt_full_dress_je
-            GGGG_sv_pm_usage_full_dress > GGGG_FULL_DRESS_ADOPTION_THRESHOLD
+            GGGG_sv_mo_usage_full_dress > GGGG_FULL_DRESS_ADOPTION_THRESHOLD
         }
     }
     
@@ -52,12 +54,15 @@
 GGGG_je_helmets_drab = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     
+    group = je_group_technology
+    
     is_shown_when_inactive = {
         NOT = {
             has_variable = GGGG_has_uniforms_3
         }
         OR = {
             can_research = trench_works
+            has_technology_researched = trench_works
             has_technology_researched = bolt_action_rifles
         }
         GGGG_sv_count_army_building_levels >= 5 # Ignore navy
@@ -76,7 +81,7 @@ GGGG_je_helmets_drab = {
     complete = {
         custom_tooltip = {
             text = GGGG_tt_helmets_drab_je
-            GGGG_sv_pm_usage_helmets_drab > GGGG_HELMETS_ADOPTION_THRESHOLD
+            GGGG_sv_mo_usage_helmets_drab > GGGG_HELMETS_ADOPTION_THRESHOLD
         }
     }
     
