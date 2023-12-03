@@ -1,8 +1,8 @@
 {
     "name" : "Gas, Guns, Garb, and Grub",
     "id" : "",
-    "version" : "1.4.1",
-    "supported_game_version" : "1.4.*",
+    "version" : "2.0.0",
+    "supported_game_version" : "1.5.*",
     "short_description" : "",
     "tags" : [],
     "relationships" : [],
