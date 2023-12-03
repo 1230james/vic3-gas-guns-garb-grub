@@ -4,7 +4,13 @@
     "version" : "2.0.0",
     "supported_game_version" : "1.5.*",
     "short_description" : "",
-    "tags" : [],
+    "tags" : [
+        "Events",
+        "Economy And Buildings",
+        "Gameplay",
+        "Journal Entries",
+        "Warfare"
+    ],
     "relationships" : [],
     "game_custom_data" : {
         "multiplayer_synchronized" : true
