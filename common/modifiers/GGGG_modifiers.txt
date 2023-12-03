@@ -1,6 +1,6 @@
 ﻿GGGG_food_throughput_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-    building_food_industry_throughput_mult = 0.1
+    building_food_industry_throughput_add = 0.1
 }
 
 GGGG_fresh_rations_modifier = {
@@ -10,10 +10,10 @@ GGGG_fresh_rations_modifier = {
 
 GGGG_produce_throughput_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-    building_food_industry_throughput_mult        = 0.15
-    building_group_bg_agriculture_throughput_mult = 0.15
-    building_group_bg_ranching_throughput_mult    = 0.15
-    building_group_bg_plantations_throughput_mult = 0.15
+    building_food_industry_throughput_add        = 0.15
+    building_group_bg_agriculture_throughput_add = 0.15
+    building_group_bg_ranching_throughput_add    = 0.15
+    building_group_bg_plantations_throughput_add = 0.15
 }
 
 GGGG_dress_modifier = {
@@ -28,6 +28,6 @@ GGGG_parade_modifier = {
 
 GGGG_helmets_throughput_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-    building_textile_mills_throughput_mult = 0.15
-    building_steel_mills_throughput_mult   = 0.05
+    building_textile_mills_throughput_add = 0.15
+    building_steel_mills_throughput_add   = 0.05
 }

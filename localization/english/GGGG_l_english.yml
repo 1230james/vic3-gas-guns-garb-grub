@@ -92,10 +92,12 @@
     GGGG_je_helmets_drab_reason:         "Battle analyses conclude that the colorful dress of the past has now become obsolete and is actively getting our soldiers wounded and killed. Military leaders are now pushing to adopt more pragmatic uniforms."
     
     # Tooltips
-    GGGG_tt_canned_goods_je: "Current combined usage of #v $GGGG_mo_canned_rations$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
-    GGGG_tt_refrigerated_je: "Current combined usage of #v $GGGG_mo_refrigerated_rations$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_REFRIGERATED_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_refrigerated_rations'), '(CFixedPoint)100' )|0]%#!)#!"
-    GGGG_tt_full_dress_je:   "Current combined usage of #v $GGGG_mo_full_dress$#! across #bold all military units#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_FULL_DRESS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_full_dress'), '(CFixedPoint)100' )|0]%#!)#!"
-    GGGG_tt_helmets_drab_je: "Current combined usage of #v $GGGG_mo_modern_uniform$#! across #bold all army battalions#! is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_HELMETS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_pm_usage_helmets_drab'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_canned_goods_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_canned_rations').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_refrigerated_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_refrigerated_rations').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_REFRIGERATED_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_refrigerated_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_full_dress_je:   "Current combined usage of [GetMobilizationOption('GGGG_mo_full_dress').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_FULL_DRESS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_full_dress'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_helmets_drab_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_modern_uniform').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_HELMETS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_helmets_drab'), '(CFixedPoint)100' )|0]%#!)#!"
+    
+    GGGG_tt_no_can_opener_ev: "The #v $technology_events.50.t$#! event will not fire for [SCOPE.sCountry('target_country').GetName]."
     
     # Events
     GGGG_ev_rations_1_title:  "A Canned Success!"
@@ -110,7 +112,7 @@
     GGGG_ev_rations_2_flavor: ""Even from farm to field kitchen, the meals we have taste fresh, as if it were all sourced locally. Sir, it's truly nothing short of revolutionary that the men can eat like this even across continents and oceans!""
     GGGG_ev_rations_2_a:      "Meals, ready to eat!"
     GGGG_ev_rations_2_b:      "Everyone deserves to have fresh food everywhere!"
-    GGGG_ev_rations_2_c:      "Perhaps we should invest in a can opener for the troops next?"
+    GGGG_ev_rations_2_c:      "$GGGG_ev_rations_1_b$"
     
     GGGG_ev_uniforms_1_title:  "Trendsetting Army Fashion"
     GGGG_ev_uniforms_1_desc:   "It appears that our adoption of colorful regimental dresses have garnered the love of the fashion-oriented and the common man."
