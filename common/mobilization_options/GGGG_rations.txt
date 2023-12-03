@@ -61,11 +61,15 @@ GGGG_mo_canned_rations = {
     
     possible = {
         scope:military_formation = {
-            has_mobilization_option = mobilization_option:GGGG_mo_bread_meat_rations
             NOT = {
                 has_mobilization_option = mobilization_option:GGGG_mo_foraged_rations
             }
         }
+        market ?= {
+			mg:groceries ?= {
+				market_goods_sell_orders > 0
+			}
+		}
     }
     
     can_be_turned_off = {
@@ -129,6 +133,17 @@ GGGG_mo_refrigerated_rations = {
         scope:military_formation = {
             has_mobilization_option = mobilization_option:GGGG_mo_canned_rations
         }
+        market ?= {
+			mg:fruit ?= {
+				market_goods_sell_orders > 0
+			}
+            mg:meat ?= {
+				market_goods_sell_orders > 0
+			}
+            mg:electricity ?= {
+				market_goods_sell_orders > 0
+			}
+		}
     }
     
     on_activate_while_mobilized = {

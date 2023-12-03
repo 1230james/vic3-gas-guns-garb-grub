@@ -166,7 +166,7 @@ GGGG_mo_rifling = {
         rifling
     }
     
-    upkeep_modifier = {
+    upkeep_modifier_unscaled = {
         goods_input_small_arms_mult = 0.05
     }
     
@@ -223,7 +223,7 @@ GGGG_mo_breechblocks = {
         repeaters
     }
     
-    upkeep_modifier = {
+    upkeep_modifier_unscaled = {
         goods_input_small_arms_mult = 0.10
         goods_input_ammunition_mult = 0.10
     }
@@ -274,7 +274,7 @@ GGGG_mo_bolt_actions = {
         bolt_action_rifles
     }
     
-    upkeep_modifier = {
+    upkeep_modifier_unscaled = {
         goods_input_small_arms_mult = 0.10
         goods_input_ammunition_mult = 0.10
     }
