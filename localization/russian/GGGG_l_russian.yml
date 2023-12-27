@@ -1,0 +1,134 @@
+﻿l_russian:
+    # MO text
+    GGGG_txt_GGGG_feature: "#italic Это особенность из модификации #blue Gas, Guns, Garb, and Grub#!.#!"
+    
+    # Mobilization option groups
+    GGGG_mog_guns:     "Вооружение"
+    GGGG_mog_rations:  "Рационы"
+    GGGG_mog_uniforms: "Униформа"
+    
+    GGGG_mog_guns_desc:     "Конструкция оружия, выдаваемого солдатам в $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mog_rations_desc:  "Как кормят солдат в $concept_army$ во время мобилизации.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mog_uniforms_desc: "Униформа, выдаваемая солдатам в $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Supplements MOs
+    GGGG_mo_wine:      "$wine$"
+    GGGG_mo_wine_desc: "Помогает отдохнуть."
+    
+    # Gun MOs
+    # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
+    # weird vanilla issue where auto separation of the modifiers list and the description text doesn't happen with the
+    # multipliers modifier types.
+    GGGG_mo_melee_weapons:   "Холодное оружие"
+    GGGG_mo_firearms:        "Огнестрельное оружие"
+    GGGG_mo_percussion_caps: "$percussion_caps$"
+    GGGG_mo_rifling:         "$rifling$"
+    GGGG_mo_breechblocks:    "Заряжание с казны"
+    GGGG_mo_bolt_actions:    "Магазинное питание"
+    
+    GGGG_mo_melee_weapons_desc:   "Простое примитивное оружие ближнего боя, обеспечивающее нашим войскам минимум боевых возможностей.\n\n#bold $GGGG_mo_melee_weapons$#! #n нельзя#! удалить, но его негативные эффекты могут быть убраны с помощью [GetMobilizationOption('GGGG_mo_firearms').GetName].\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_firearms_desc:        "Основа арсенала любой современной армии. Изначально примитивное, это оружие может быть модернизировано, чтобы со временем становиться все более сложным и смертоносным.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_percussion_caps_desc: "Наши оружие и боеприпасы будут модернизированы для использования ударных капсюлей, что повысит надежность ведения огня в суровых условиях.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_rifling_desc:         "\n\nПрорезанные в стволах канавки, придающие вращение снаряду, сделают наше оружие более точным и смертоносным на дальних дистанциях.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_breechblocks_desc:    "\n\nНадежные затворы обеспечивают герметичность ствола при стрельбе, а также позволяют нашим солдатам быстро заряжать оружие через казенник.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_bolt_actions_desc:    "\n\nХорошо продуманная конструкция оружия позволяет солдату извлечь стреляную гильзу и зарядить новый патрон одним быстрым движением рукоятки затвора.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Rations MOs
+    GGGG_mo_foraged_rations:      "Местная фуражировка"
+    GGGG_mo_bread_meat_rations:   "Простые рационы"
+    GGGG_mo_canned_rations:       "Консервы"
+    GGGG_mo_refrigerated_rations: "Холодильники"
+    
+    GGGG_mo_foraged_rations_desc:      "В чрезвычайных ситуациях мы можем заставить войска прочесывать окрестности в поисках припасов, но это дорого обойдется местному региону и снизит эффективность $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_bread_meat_rations_desc:   "Наши солдаты будут получать базовый рацион из галет и солонины.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_canned_rations_desc:       "Мы заменим продуктовые пайки консервами, используя преимущества промышленного производства для питания войск за рубежом.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_refrigerated_rations_desc: "Новые технологии хранения позволяют нам сохранять свежие продукты от порчи в течение длительного времени и перевозить их на дальние расстояния. Мы можем воспользоваться этим, чтобы значительно улучшить качество питания наших солдат.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Uniforms MOs
+    GGGG_mo_traditional_uniforms: "Обычная форма"
+    GGGG_mo_full_dress:           "Парадный мундир"
+    GGGG_mo_modern_uniform:       "Каска и камуфляж"
+    
+    GGGG_mo_traditional_uniforms_desc: "Солдатам выдается обычная форма или форма более традиционного дизайна. Поверх них могут быть добавлены более сложные элементы униформы.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_full_dress_desc:           "Цветная форма помогает солдатам узнавать своих союзников на поле боя и действовать как единое целое, а также повышает престиж армии.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_modern_uniform_desc:       "Стальные шлемы в сочетании с камуфлированной формой помогают снизить количество боевых потерь.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Input good modifier types
+    modifier_goods_input_luxury_clothes_add:      "Потребление @luxury_clothes! роскошной одежды"
+    modifier_goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes! роскошной одежды, потребляемой сооружениями."
+    
+    modifier_goods_input_grain_mult:          "$modifier_goods_input_grain_add$"
+    modifier_goods_input_grain_mult_desc:     "$modifier_goods_input_grain_add_desc$"
+    modifier_goods_input_meat_mult:           "$modifier_goods_input_meat_add$"
+    modifier_goods_input_meat_mult_desc:      "$modifier_goods_input_meat_add_desc$"
+    modifier_goods_input_groceries_mult:      "$modifier_goods_input_groceries_add$"
+    modifier_goods_input_groceries_mult_desc: "$modifier_goods_input_groceries_add_desc$"
+    modifier_goods_input_fruit_mult:          "$modifier_goods_input_fruit_add$"
+    modifier_goods_input_fruit_mult_desc:     "$modifier_goods_input_fruit_add_desc$"
+    
+    # Modifiers
+    GGGG_food_throughput_modifier:    "Консервированные армейские пайки"
+    GGGG_fresh_rations_modifier:      "Полевые кухни со свежими продуктами"
+    GGGG_produce_throughput_modifier: "Стимулирование производства свежих продуктов"
+    GGGG_dress_modifier:              "Новая армейская форма"
+    GGGG_parade_modifier:             "Патриотический парад"
+    GGGG_helmets_throughput_modifier: "Принятие современной униформы"
+    
+    # Journal entries
+    GGGG_je_canned_goods:                "Консервированные армейские пайки"
+    GGGG_je_canned_goods_reason:         "С изобретением консервирования как способа сохранения продуктов питания военные планируют перейти на консервированные пайки, чтобы внести разнообразие в рацион и упростить логистику продовольственного обеспечения."
+    GGGG_je_refrigerated_produce:        "Охлажденные армейские пайки"
+    GGGG_je_refrigerated_produce_reason: "С изобретением холодильников как средства сохранения продуктов питания военные логисты надеются воспользоваться его преимуществами, чтобы сохранить рационы более свежими и разнообразными, чем раньше."
+    GGGG_je_full_dress:                  "Цветная армейская форма"
+    GGGG_je_full_dress_reason:           "В результате появления нового огнестрельного оружия и военной доктрины офицеры настаивают на принятии цветной, хорошо заметной униформы для обеспечения сплоченности на поле боя."
+    GGGG_je_helmets_drab:                "Защитная полевая форма"
+    GGGG_je_helmets_drab_reason:         "Анализ боевых действий приводит к выводу, что красочные мундиры прошлого уже устарели и активно приводят к ранениям и гибели наших солдат. Военное руководство настаивает на принятии более прагматичной униформы защитного цвета."
+    
+    # Tooltips
+    GGGG_tt_canned_goods_je: "Текущее суммарное использование [GetMobilizationOption('GGGG_mo_canned_rations').GetName] среди всех [Concept('concept_battalion', '$concept_battalions$')] по крайней мере #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_refrigerated_je: "Текущее суммарное использование [GetMobilizationOption('GGGG_mo_refrigerated_rations').GetName] среди всех [Concept('concept_battalion', '$concept_battalions$')] по крайней мере #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_REFRIGERATED_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_refrigerated_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_full_dress_je:   "Текущее суммарное использование [GetMobilizationOption('GGGG_mo_full_dress').GetName] среди всех [Concept('concept_battalion', '$concept_battalions$')] по крайней мере #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_FULL_DRESS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_full_dress'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_helmets_drab_je: "Текущее суммарное использование [GetMobilizationOption('GGGG_mo_modern_uniform').GetName] среди всех [Concept('concept_battalion', '$concept_battalions$')] по крайней мере #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_HELMETS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_helmets_drab'), '(CFixedPoint)100' )|0]%#!)#!"
+    
+    GGGG_tt_no_can_opener_ev: "Ивент #v $technology_events.50.t$#! не произойдет для [SCOPE.sCountry('target_country').GetName]."
+    
+    # Events
+    GGGG_ev_rations_1_title:  "Консервированный успех!"
+    GGGG_ev_rations_1_desc:   "Использование консервов в пайках наших солдат позволило значительно увеличить срок годности, разнообразие и качество военного питания."
+    GGGG_ev_rations_1_flavor: ""Может, это и не домашняя готовка моей жены, но это лучше, чем черствые сухари и испорченные овощи. Да и кошка к мясу не лезет.""
+    GGGG_ev_rations_1_a:      "Армия марширует благодаря своим желудкам."
+    GGGG_ev_rations_1_b:      "Разработка стандартизированной открывашки была бы разумной."
+    GGGG_ev_rations_1_c:      "Может быть, мы сможем как-то привнести домашнюю кухню на фронт?"
+    
+    GGGG_ev_rations_2_title:  "Свежесть фермы прямиком на фронте"
+    GGGG_ev_rations_2_desc:   "Современные технологии производства и обработки продуктов питания позволяют нашим солдатам питаться свежими продуктами и товарами даже вдали от дома."
+    GGGG_ev_rations_2_flavor: ""Даже вдали от ферм, на полевой кухне продукты, которые мы едим, свежие, как будто все это было получено здесь же. Сэр, это действительно не что иное, как революция, что люди могут так питаться даже на другом континете!""
+    GGGG_ev_rations_2_a:      "Блюда, готовые к употреблению!"
+    GGGG_ev_rations_2_b:      "Каждый заслуживает того, чтобы питаться свежими продуктами!"
+    GGGG_ev_rations_2_c:      "$GGGG_ev_rations_1_b$"
+    
+    GGGG_ev_uniforms_1_title:  "Законодатели армейской моды"
+    GGGG_ev_uniforms_1_desc:   "Похоже, что красочные полковые мундиры завоевали любовь модников и простых людей."
+    GGGG_ev_uniforms_1_flavor: ""Независимо от сословия или происхождения, армия должна сделать из вас выдающегося человека!""
+    GGGG_ev_uniforms_1_a:      "Организуйте парад, чтобы показать патриотам, какая слава их ожидает!"
+    GGGG_ev_uniforms_1_b:      "Эта униформа станет лучшей в мире!"
+    GGGG_ev_uniforms_1_c:      "Разве мы не можем дать им что-то более прагматичное и разумное?"
+    
+    GGGG_ev_uniforms_2_title:  "Современная полевая форма"
+    GGGG_ev_uniforms_2_desc:   "Полевые исспытания показывают, что, несмотря на меньшую престижность, новая форма и стальные шлемы эффективно снижают количество потерь."
+    GGGG_ev_uniforms_2_flavor: ""Меня ударило в лоб и свалило на дно окопа... разрывная пуля попала в каску, не пробив ее, однако достаточно сильно, чтобы оставить на ней вмятину. Если бы я, как это было принято еще нескольких дней назад, носил фуражку, то в полку было бы на одного убитого больше.""
+    GGGG_ev_uniforms_2_a:      "Мы должны сосредоточиться на закупке большего количества этого жизненно важного снаряжения."
+    GGGG_ev_uniforms_2_b:      "Современное снаряжение бесполезно, если у нас нет столь же современной логистики."
+    GGGG_ev_uniforms_2_c:      "Если дюйм стали может спасти человека, то смогут ли ярды спасти нацию?"
+    GGGG_ev_uniforms_2_d:      "Если дюйм стали может остановить пулю, то представьте, какой потенциал открывается перед обшитыми броней машинами!"
+    

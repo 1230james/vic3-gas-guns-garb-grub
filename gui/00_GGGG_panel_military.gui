@@ -206,12 +206,14 @@ types panel_military {
 												align = nobaseline
 												default_format = "#title"
 												margin_left = 2
+                                                multiline = yes # GGGG
+                                                max_width = 150 # GGGG
 											}
 
 											dynamicgridbox = {
 												datamodel = "[MobilizationOptionGroup.GetMobilizationOptions]"
-												# margin_right = 5 # GGGG (silence error )
-												# margin_bottom = 5 # GGGG (silence error 
+												# margin_right = 5 # GGGG (silence error)
+												# margin_bottom = 5 # GGGG (silence error)
                                                 datamodel_wrap = 3 # GGGG
                                                 flipdirection = yes # GGGG
 
