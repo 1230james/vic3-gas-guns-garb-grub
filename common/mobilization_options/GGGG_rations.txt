@@ -3,17 +3,12 @@
     group   = GGGG_mog_rations
     
     possible = {
-        scope:military_formation = {
-            NOR = {
-                has_mobilization_option = mobilization_option:GGGG_mo_canned_rations
-                has_mobilization_option = mobilization_option:GGGG_mo_refrigerated_rations
-            }
-        }
+        always = yes
     }
     
     upkeep_modifier = {
-        goods_input_grain_add       = -0.6
-        goods_input_meat_add        = -0.4
+        goods_input_grain_add = -0.6
+        goods_input_meat_add  = -0.4
     }
     
     unit_modifier = {
