@@ -33,6 +33,11 @@ combat_unit_type_monitor = {
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
     }
+    
+    upgrades = {
+        combat_unit_type_destroyer
+		combat_unit_type_torpedo_boat
+	}
 }
 
 combat_unit_type_destroyer = {
@@ -63,6 +68,7 @@ combat_unit_type_destroyer = {
 	
 	upgrades = {
 		combat_unit_type_torpedo_boat
+        combat_unit_type_scout_cruiser
 	}
 }
 
@@ -94,6 +100,7 @@ combat_unit_type_torpedo_boat = {
 	
 	upgrades = {
 		combat_unit_type_destroyer
+        combat_unit_type_scout_cruiser
 	}
 }
 
@@ -153,6 +160,11 @@ combat_unit_type_ironclad = {
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
     }
+    
+    upgrades = {
+		combat_unit_type_dreadnought
+        combat_unit_type_battleship
+	}
 }
 
 combat_unit_type_dreadnought = {
@@ -181,6 +193,10 @@ combat_unit_type_dreadnought = {
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
     }
+    
+    upgrades = {
+        combat_unit_type_battleship
+	}
 }
 
 combat_unit_type_battleship = {
