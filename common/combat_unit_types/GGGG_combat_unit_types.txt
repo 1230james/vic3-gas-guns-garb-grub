@@ -149,6 +149,7 @@ combat_unit_type_ironclad = {
         unit_offense_add = 50
         unit_defense_add = 50
         unit_morale_loss_add = 8
+		unit_convoy_raiding_mult = -0.5
     }
 
     formation_modifier = {
@@ -182,6 +183,7 @@ combat_unit_type_dreadnought = {
         unit_offense_add = 80
         unit_defense_add = 80
         unit_morale_loss_add = 6
+		unit_convoy_raiding_mult = -0.5
     }
 
     formation_modifier = {
@@ -214,6 +216,7 @@ combat_unit_type_battleship = {
         unit_offense_add = 100
         unit_defense_add = 100
         unit_morale_loss_add = 4
+		unit_convoy_raiding_mult = -0.5
     }
 
     formation_modifier = {
