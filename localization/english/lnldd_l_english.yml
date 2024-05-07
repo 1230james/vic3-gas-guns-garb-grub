@@ -1,0 +1,33 @@
+﻿l_english:
+    # MO text
+    lnldd_txt_lnldd_feature: "#italic This is a feature of the #blue Lock and Loaded#! mod.#!"
+    
+    # Production Methods
+    pmg_base_bullet_building_munition_plants: "Small Arm Munitions"
+    pm_paper_cartridges: "Paper Cartridges"
+    pm_metal_case_bullets: "Metal Case Bullets"
+    pmg_base_shell_building_munition_plants: "Artillery Shells"
+    pm_cannon_ball: "Cannon Balls"
+
+    # Mobilization option groups
+    lnldd_mog_munitions: "Munitions"
+    
+    lnldd_mog_munitions_desc: "The type of ammunition issued to the men in the $concept_army$.\n\n$lnldd_txt_lnldd_feature$"
+
+    
+    # Ammo MOs
+    lnldd_loose_issued: "Loosely Issued"
+    lnldd_mo_paper_catridges: "$pm_paper_cartridges$"
+    lnldd_mo_percussion_caps: "$percussion_caps$"
+    lnldd_metal_cased_bullets: "$pm_metal_case_bullets$"
+    lnldd_packed_bullets: "Packaged Ammo Feeder"
+    
+    lnldd_loose_issued_desc: "\n\nSoldiers with firearms are issued with loosely packed gunpowders and lead balls, it took complex procedure to reload.\n\n$lnldd_txt_lnldd_feature$"
+    
+    lnldd_mo_paper_catridges_desc: "\n\nRight amount of gunpowder and the bullet head are packed in paper cylinders while being issued, this greatly simplifies the reloading procedure.\n\n$lnldd_txt_lnldd_feature$"
+    
+    lnldd_mo_percussion_caps_desc: "\n\nPercussion caps that replace the flash pan, simplifying the weapon structure while offering better reliability\n\n$lnldd_txt_lnldd_feature$"
+    
+    lnldd_metal_cased_bullets_desc: "\n\nGunpowder and a pointy bullet head are tightly installed in a metal case, allowing it to be loaded and fired at once.\n\n$lnldd_txt_lnldd_feature$"
+
+    lnldd_packed_bullets_desc: "\n\nMultiple bullets are packed together into clips, magazines and belts, allowing soldiers to fire continuously for a long time before a smooth reload.\n\n$lnldd_txt_lnldd_feature$"

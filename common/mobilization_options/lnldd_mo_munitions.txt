@@ -1,6 +1,6 @@
-﻿GGGG_mo_melee_weapons = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_pikehead.dds"
-    group   = GGGG_mog_guns
+﻿lnldd_loose_issued = {
+    texture = "gfx/interface/icons/mobilization_options/lnldd_loose_issue.dds"
+    group   = lnldd_mog_munitions
     
     possible = {
         always = yes
@@ -10,49 +10,43 @@
         always = no
     }
     
-    unit_modifier = {
-        unit_offense_mult  = -0.25
-        unit_defense_mult  = -0.25
-        unit_kill_rate_add = -0.10
-    }
-    
     ai_weight = {
         value = 1
     }
 }
 
-GGGG_mo_firearms = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_flintlocks.dds"
-    group   = GGGG_mog_guns
+lnldd_mo_paper_catridges = {
+    texture = "gfx/interface/icons/mobilization_options/lnldd_paper_catridges.dds"
+    group   = lnldd_mog_munitions
     
     possible = {
+        scope:military_formation = {
+            has_mobilization_option = mobilization_option:GGGG_mo_firearms
+            NOT = {
+                has_mobilization_option = mobilization_option:lnldd_metal_cased_bullets
+            }
+        }
         market ?= {
-            mg:small_arms ?= {
+            mg:ammunition ?= {
                 market_goods_sell_orders > 0
             }
         }
     }
     
     can_be_turned_off = {
-        scope:military_formation = {
-            NOR = {
-                has_mobilization_option = mobilization_option:GGGG_mo_rifling
-                has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
-                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
-            }
-        }
+        always = yes
     }
     
     on_activate = {
-        if = { # Allow free changes during first week of game so AI can pick for themselves what they want
-            limit = { # b/c otherwise we have to overwrite vanilla military formation histories
+        if = {
+            limit = {
                 game_date >= 1836.1.8
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
                 add_organization = {
                     value = organization
-                    multiply = -0.5
+                    multiply = -0.25
                 }
             }
         }
@@ -63,7 +57,7 @@ GGGG_mo_firearms = {
             text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
             add_organization = {
                 value = organization
-                multiply = -0.5
+                multiply = -0.25
             }
         }
     }
@@ -73,23 +67,23 @@ GGGG_mo_firearms = {
     }
     
     upkeep_modifier = {
-        goods_input_small_arms_add = 0.5
-        goods_input_lead_add = 0.1
-        goods_input_sulfur_add = 0.1
+        goods_input_ammunition_add = 0.2
+        goods_input_lead_add = -0.1
+        goods_input_sulfur_add = -0.1
     }
     
-    unit_modifier = { # Cancel out effects of melee weapons
-        unit_offense_mult  = 0.25
-        unit_defense_mult  = 0.25
-        unit_kill_rate_add = 0.10
+    unit_modifier = {
+        unit_offense_add   = 3
+        unit_defense_add   = 3
+        unit_kill_rate_add = 0.01
     }
     
     ai_weight = {
-        value = 10 # Very important
+        value = 1
         if = {
             limit = {
                 market ?= {
-                    mg:small_arms ?= {
+                    mg:ammunition ?= {
                         market_goods_pricier < 0.05
                     }
                 }
@@ -99,14 +93,26 @@ GGGG_mo_firearms = {
     }
 }
 
-GGGG_mo_rifling = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_rifling.dds"
-    group   = GGGG_mog_guns
+lnldd_mo_percussion_caps = {
+    texture = "gfx/interface/icons/production_method_icons/GGGG_caplocks.dds"
+    group   = lnldd_mog_munitions
     
     possible = {
         scope:military_formation = {
             has_mobilization_option = mobilization_option:GGGG_mo_firearms
+            NOT = {
+                has_mobilization_option = mobilization_option:lnldd_packed_bullets
+            }
         }
+        market ?= {
+            mg:ammunition ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+    }
+    
+    can_be_turned_off = {
+        always = yes
     }
     
     on_activate = {
@@ -118,7 +124,7 @@ GGGG_mo_rifling = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
                 add_organization = {
                     value = organization
-                    multiply = -0.5
+                    multiply = -0.25
                 }
             }
         }
@@ -129,17 +135,17 @@ GGGG_mo_rifling = {
             text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
             add_organization = {
                 value = organization
-                multiply = -0.5
+                multiply = -0.25
             }
         }
     }
     
     unlocking_technologies = {
-        rifling
+        percussion_cap
     }
     
-    upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.05
+    upkeep_modifier = {
+        goods_input_ammunition_add = 0.5
     }
     
     unit_modifier = {
@@ -153,7 +159,7 @@ GGGG_mo_rifling = {
         if = {
             limit = {
                 market ?= {
-                    mg:small_arms ?= {
+                    mg:ammunition ?= {
                         market_goods_pricier < 0.05
                     }
                 }
@@ -163,13 +169,21 @@ GGGG_mo_rifling = {
     }
 }
 
-GGGG_mo_breechblocks = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_repeaters.dds"
-    group   = GGGG_mog_guns
+lnldd_metal_cased_bullets = {
+    texture = "gfx/interface/icons/mobilization_options/lnldd_metal_case_bullets.dds"
+    group   = lnldd_mog_munitions
     
     possible = {
         scope:military_formation = {
-            has_mobilization_option = mobilization_option:GGGG_mo_firearms
+            has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
+            NOT = {
+                has_mobilization_option = mobilization_option:lnldd_mo_paper_catridges
+            }
+        }
+        market ?= {
+            mg:ammunition ?= {
+                market_goods_sell_orders > 0
+            }
         }
     }
     
@@ -190,7 +204,7 @@ GGGG_mo_breechblocks = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
                 add_organization = {
                     value = organization
-                    multiply = -0.5
+                    multiply = -0.25
                 }
             }
         }
@@ -201,7 +215,7 @@ GGGG_mo_breechblocks = {
             text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
             add_organization = {
                 value = organization
-                multiply = -0.5
+                multiply = -0.25
             }
         }
     }
@@ -210,29 +224,21 @@ GGGG_mo_breechblocks = {
         repeaters
     }
     
-    upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.10
-        goods_input_ammunition_mult = 0.10
+    upkeep_modifier = {
+        goods_input_ammunition_add = 0.2
+        goods_input_ammunition_mult = 0.1
+        goods_input_lead_add = -0.1
+        goods_input_sulfur_add = -0.1
     }
     
     unit_modifier = {
-        unit_offense_add   = 10
-        unit_defense_add   = 10
-        unit_kill_rate_add = 0.03
+        unit_offense_add   = 5
+        unit_defense_add   = 5
+        unit_kill_rate_add = 0.05
     }
     
     ai_weight = {
         value = 1
-        if = {
-            limit = {
-                market ?= {
-                    mg:small_arms ?= {
-                        market_goods_pricier < 0.05
-                    }
-                }
-            }
-            add = 5
-        }
         if = {
             limit = {
                 market ?= {
@@ -241,20 +247,31 @@ GGGG_mo_breechblocks = {
                     }
                 }
             }
-            add = 5
+            multiply = 10
         }
     }
 }
 
-GGGG_mo_bolt_actions = {
-    texture = "gfx/interface/icons/production_method_icons/GGGG_bolt_actions.dds"
-    group   = GGGG_mog_guns
+lnldd_packed_bullets = {
+    texture = "gfx/interface/icons/mobilization_options/lnldd_packed_bullets.dds"
+    group   = lnldd_mog_munitions
     
     possible = {
         scope:military_formation = {
-            has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
             has_mobilization_option = mobilization_option:lnldd_metal_cased_bullets
+            NOT = {
+                has_mobilization_option = mobilization_option:lnldd_mo_percussion_caps
+            }
         }
+        market ?= {
+            mg:ammunition ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+    }
+    
+    can_be_turned_off = {
+        always = yes
     }
     
     on_activate = {
@@ -266,7 +283,7 @@ GGGG_mo_bolt_actions = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
                 add_organization = {
                     value = organization
-                    multiply = -0.5
+                    multiply = -0.25
                 }
             }
         }
@@ -277,23 +294,23 @@ GGGG_mo_bolt_actions = {
             text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
             add_organization = {
                 value = organization
-                multiply = -0.5
+                multiply = -0.25
             }
         }
     }
     
     unlocking_technologies = {
-        bolt_action_rifles
+        automatic_machine_guns
     }
     
-    upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.10
-        goods_input_ammunition_mult = 0.10
+    upkeep_modifier = {
+        goods_input_ammunition_mult = 0.3
+        goods_input_fabric_add = 1
     }
     
     unit_modifier = {
-        unit_offense_add   = 10
-        unit_defense_add   = 10
+        unit_offense_add   = 8
+        unit_defense_add   = 8
         unit_kill_rate_add = 0.03
     }
     
@@ -302,22 +319,12 @@ GGGG_mo_bolt_actions = {
         if = {
             limit = {
                 market ?= {
-                    mg:small_arms ?= {
-                        market_goods_pricier < 0.05
-                    }
-                }
-            }
-            add = 5
-        }
-        if = {
-            limit = {
-                market ?= {
                     mg:ammunition ?= {
                         market_goods_pricier < 0.05
                     }
                 }
             }
-            add = 5
+            multiply = 10
         }
     }
 }

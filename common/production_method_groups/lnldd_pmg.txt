@@ -1,0 +1,20 @@
+pmg_base_bullet_building_munition_plants = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_paper_cartridges
+		pm_percussion_caps
+		pm_metal_case_bullets
+	}
+}
+
+pmg_base_shell_building_munition_plants = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_cannon_ball
+		pm_explosive_shells
+	}
+}

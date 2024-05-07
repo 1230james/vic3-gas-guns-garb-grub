@@ -1,0 +1,30 @@
+building_munition_plants = {
+	building_group = bg_munition_plants
+	texture = "gfx/interface/icons/building_icons/munition_plants.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		gunsmithing
+	}
+
+	production_method_groups = {
+		pmg_base_bullet_building_munition_plants
+		pmg_base_shell_building_munition_plants
+		pmg_automation_building_munition_plants
+		pmg_ownership_capital_building_munition_plants
+	}
+	
+	required_construction = construction_cost_very_high
+
+	possible = {
+		error_check = {
+			severity = fail
+			this = {
+				owner = { 
+					NOT = { has_law = law_type:law_industry_banned } 
+				}
+			}
+		}
+	}
+}
