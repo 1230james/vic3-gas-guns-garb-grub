@@ -10,12 +10,10 @@
         always = no
     }
     
-    upkeep_modifier = {
-        goods_input_clothes_add = 0.5
-    }
+    upkeep_modifier = {}
     
     unit_modifier = {
-        dummy_modifier_type = 0
+        unit_recovery_rate_add = -0.10
     }
     
     ai_weight = {
@@ -28,13 +26,8 @@ GGGG_mo_full_dress = {
     group   = GGGG_mog_uniforms
     
     possible = {
-        scope:military_formation = {
-            NOT = {
-                has_mobilization_option = mobilization_option:GGGG_mo_modern_uniform
-            }
-        }
         market ?= {
-            mg:luxury_clothes ?= {
+            mg:clothes ?= {
                 market_goods_sell_orders > 0
             }
         }
@@ -60,23 +53,16 @@ GGGG_mo_full_dress = {
     }
     
     upkeep_modifier = {
-        goods_input_luxury_clothes_add = 0.5
+        goods_input_clothes_add = 0.5
     }
     
     unit_modifier = {
-        unit_offense_add        =  5
-        unit_morale_damage_mult =  0.10
-        unit_recovery_rate_add  = -0.10
+        unit_offense_add        = 5
+        unit_morale_damage_mult = 0.10
     }
     
     ai_weight = {
         value = 100
-        if = {
-            limit = {
-                has_technology_researched = trench_works
-            }
-            multiply = 0.01
-        }
     }
 }
 
@@ -86,9 +72,7 @@ GGGG_mo_modern_uniform = {
     
     possible = {
         scope:military_formation = {
-            NOT = {
-                has_mobilization_option = mobilization_option:GGGG_mo_full_dress
-            }
+            has_mobilization_option = mobilization_option:GGGG_mo_full_dress
         }
         market ?= {
             mg:steel ?= {
@@ -127,6 +111,6 @@ GGGG_mo_modern_uniform = {
     }
     
     ai_weight = {
-        value = 100
+        value = 200
     }
 }

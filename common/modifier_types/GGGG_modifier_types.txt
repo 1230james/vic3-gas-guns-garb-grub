@@ -1,9 +1,4 @@
 ﻿# Goods
-goods_input_luxury_clothes_add = {
-    good = no
-    percent = no    
-}
-
 goods_input_grain_mult = {
     good = no
     percent = yes

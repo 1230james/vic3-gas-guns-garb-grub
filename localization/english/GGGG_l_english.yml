@@ -19,14 +19,14 @@
     # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
     # weird vanilla issue where auto separation of the modifiers list and the description text doesn't happen with the
     # multipliers modifier types.
-    GGGG_mo_melee_weapons:   "Melee Weapons"
+    GGGG_mo_melee_weapons:   "Primitive Weapons"
     GGGG_mo_firearms:        "Firearms"
     GGGG_mo_percussion_caps: "$percussion_caps$"
     GGGG_mo_rifling:         "$rifling$"
     GGGG_mo_breechblocks:    "Breechblocks"
     GGGG_mo_bolt_actions:    "Bolt Actions"
     
-    GGGG_mo_melee_weapons_desc:   "Simple or primitive melee weapons, affording our troops the bare minimums in fighting capabilities.\n\n#bold $GGGG_mo_melee_weapons$#! #n cannot#! be removed, but its negative effects may be canceled out with [GetMobilizationOption('GGGG_mo_firearms').GetName].\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_melee_weapons_desc:   "Simple or primitive weapons, affording our troops the bare minimums in fighting capabilities.\n\n#bold $GGGG_mo_melee_weapons$#! #n cannot#! be removed, but its negative effects may be canceled out with [GetMobilizationOption('GGGG_mo_firearms').GetName].\n\n$GGGG_txt_GGGG_feature$"
     
     GGGG_mo_firearms_desc:        "The mainstay of any modern military's arsenal. Initially primitive, they can be upgraded to become more sophisticated and deadly over time.\n\n$GGGG_txt_GGGG_feature$"
     
@@ -53,20 +53,17 @@
     GGGG_mo_refrigerated_rations_desc: "New food storage technologies allow us to keep fresh produce from perishing for longer durations and transport them further. We can take advantage of this to vastly improve the quality of meals for our soldiers.\n\n$GGGG_txt_GGGG_feature$"
     
     # Uniforms MOs
-    GGGG_mo_traditional_uniforms: "Basic Garb"
-    GGGG_mo_full_dress:           "Full Dress"
+    GGGG_mo_traditional_uniforms: "Traditional Garb"
+    GGGG_mo_full_dress:           "Standard Dress"
     GGGG_mo_modern_uniform:       "Helmets & Drab"
     
-    GGGG_mo_traditional_uniforms_desc: "Soldiers will be issued plain uniforms or uniforms of more traditional designs. More sophisticated uniform features may be added on top of them.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_traditional_uniforms_desc: "Soldiers will be issued plain uniforms, uniforms of more traditional designs, or are required to procure their own.\n\n#bold $GGGG_mo_traditional_uniforms$#! #n cannot#! be removed, but its negative effects may be balanced or canceled out with [GetMobilizationOption('GGGG_mo_full_dress').GetName] and [GetMobilizationOption('GGGG_mo_modern_uniform').GetName].\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_full_dress_desc:           "Colorful dress uniforms make our military more prestigious and serve to help troops identify their allies and act as a cohesive unit more easily.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_full_dress_desc:           "Standardized uniforms make our military more prestigious and serve to help troops identify their allies and act as a cohesive unit more easily.\n\n$GGGG_txt_GGGG_feature$"
     
     GGGG_mo_modern_uniform_desc:       "Steel helmets combined with uniforms which blend better into the environment help reduce casualties in battle.\n\n$GGGG_txt_GGGG_feature$"
     
     # Input good modifier types
-    modifier_goods_input_luxury_clothes_add:      "@luxury_clothes! Luxury Clothes input"
-    modifier_goods_input_luxury_clothes_add_desc: "The amount of @luxury_clothes! Luxury Clothes consumed by buildings"
-    
     modifier_goods_input_grain_mult:          "$modifier_goods_input_grain_add$"
     modifier_goods_input_grain_mult_desc:     "$modifier_goods_input_grain_add_desc$"
     modifier_goods_input_meat_mult:           "$modifier_goods_input_meat_add$"
