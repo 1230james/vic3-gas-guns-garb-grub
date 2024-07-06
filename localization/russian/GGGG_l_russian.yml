@@ -64,17 +64,17 @@
     GGGG_mo_modern_uniform_desc:       "Стальные шлемы в сочетании с камуфлированной формой помогают снизить количество боевых потерь.\n\n$GGGG_txt_GGGG_feature$"
     
     # Input good modifier types
-    modifier_goods_input_luxury_clothes_add:      "Потребление @luxury_clothes! роскошной одежды"
-    modifier_goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes! роскошной одежды, потребляемой сооружениями."
+    goods_input_luxury_clothes_add:      "Потребление @luxury_clothes! роскошной одежды"
+    goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes! роскошной одежды, потребляемой сооружениями."
     
-    modifier_goods_input_grain_mult:          "$modifier_goods_input_grain_add$"
-    modifier_goods_input_grain_mult_desc:     "$modifier_goods_input_grain_add_desc$"
-    modifier_goods_input_meat_mult:           "$modifier_goods_input_meat_add$"
-    modifier_goods_input_meat_mult_desc:      "$modifier_goods_input_meat_add_desc$"
-    modifier_goods_input_groceries_mult:      "$modifier_goods_input_groceries_add$"
-    modifier_goods_input_groceries_mult_desc: "$modifier_goods_input_groceries_add_desc$"
-    modifier_goods_input_fruit_mult:          "$modifier_goods_input_fruit_add$"
-    modifier_goods_input_fruit_mult_desc:     "$modifier_goods_input_fruit_add_desc$"
+    goods_input_grain_mult:          "$goods_input_grain_add$"
+    goods_input_grain_mult_desc:     "$goods_input_grain_add_desc$"
+    goods_input_meat_mult:           "$goods_input_meat_add$"
+    goods_input_meat_mult_desc:      "$goods_input_meat_add_desc$"
+    goods_input_groceries_mult:      "$goods_input_groceries_add$"
+    goods_input_groceries_mult_desc: "$goods_input_groceries_add_desc$"
+    goods_input_fruit_mult:          "$goods_input_fruit_add$"
+    goods_input_fruit_mult_desc:     "$goods_input_fruit_add_desc$"
     
     # Modifiers
     GGGG_food_throughput_modifier:    "Консервированные армейские пайки"
