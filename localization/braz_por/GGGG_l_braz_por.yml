@@ -1,0 +1,131 @@
+﻿l_braz_por:
+    # MO text
+    GGGG_txt_GGGG_feature: "#italic This is a feature of the #blue Gas, Guns, Garb, and Grub#! mod.#!"
+    
+    # Mobilization option groups
+    GGGG_mog_guns:     "Infantry Arms"
+    GGGG_mog_rations:  "Rations"
+    GGGG_mog_uniforms: "Uniforms"
+    
+    GGGG_mog_guns_desc:     "The design of armaments issued to the men in the $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mog_rations_desc:  "How the soldiers in the $concept_army$ are fed whilst mobilized.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mog_uniforms_desc: "The style of uniform issued to all soldiers in the $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Supplements MOs
+    GGGG_mo_wine:      "$wine$"
+    GGGG_mo_wine_desc: "Helps to unwind."
+    
+    # Gun MOs
+    # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
+    # weird vanilla issue where auto separation of the modifiers list and the description text doesn't happen with the
+    # multipliers modifier types.
+    GGGG_mo_melee_weapons:   "Primitive Weapons"
+    GGGG_mo_firearms:        "Firearms"
+    GGGG_mo_percussion_caps: "$percussion_caps$"
+    GGGG_mo_rifling:         "$rifling$"
+    GGGG_mo_breechblocks:    "Breechblocks"
+    GGGG_mo_bolt_actions:    "Bolt Actions"
+    
+    GGGG_mo_melee_weapons_desc:   "Simple or primitive weapons, affording our troops the bare minimums in fighting capabilities.\n\n#bold $GGGG_mo_melee_weapons$#! #n cannot#! be removed, but its negative effects may be canceled out with [GetMobilizationOption('GGGG_mo_firearms').GetName].\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_firearms_desc:        "The mainstay of any modern military's arsenal. Initially primitive, they can be upgraded to become more sophisticated and deadly over time.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_percussion_caps_desc: "Our guns and ammunition will be upgraded to use percussion caps, making our weapons more reliable in rough conditions.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_rifling_desc:         "\n\nEtched grooves in our gun barrels imparting a spin on the projectile will make our guns more accurate and lethal at farther ranges.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_breechblocks_desc:    "\n\nReliable breechblocks will enable the safe and quicker operation of guns that are loaded in the rear instead of down the front end of the barrel.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_bolt_actions_desc:    "\n\nWell-designed firearm actions allow a soldier to extract a discharged round and load a new one in a single swift movement by means of a bolt handle.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Rations MOs
+    GGGG_mo_foraged_rations:      "Local Foraging"
+    GGGG_mo_bread_meat_rations:   "Simple Rations"
+    GGGG_mo_canned_rations:       "Canned Goods"
+    GGGG_mo_refrigerated_rations: "Refrigeration"
+    
+    GGGG_mo_foraged_rations_desc:      "In times of emergency, we can force the troops to forage the land for supplies, but it will be costly for the local region and the effectiveness of the $concept_army$.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_bread_meat_rations_desc:   "Our soldiers will receive basic rations of hardtack & salted meat.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_canned_rations_desc:       "We will replace the basic rations with canned foods, taking advantage of industrial production to feed the troops abroad.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_refrigerated_rations_desc: "New food storage technologies allow us to keep fresh produce from perishing for longer durations and transport them further. We can take advantage of this to vastly improve the quality of meals for our soldiers.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Uniforms MOs
+    GGGG_mo_traditional_uniforms: "Traditional Garb"
+    GGGG_mo_full_dress:           "Standard Dress"
+    GGGG_mo_modern_uniform:       "Helmets & Drab"
+    
+    GGGG_mo_traditional_uniforms_desc: "Soldiers will be issued plain uniforms, uniforms of more traditional designs, or are required to procure their own.\n\n#bold $GGGG_mo_traditional_uniforms$#! #n cannot#! be removed, but its negative effects may be balanced or canceled out with [GetMobilizationOption('GGGG_mo_full_dress').GetName] and [GetMobilizationOption('GGGG_mo_modern_uniform').GetName].\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_full_dress_desc:           "Standardized uniforms make our military more prestigious and serve to help troops identify their allies and act as a cohesive unit more effectively.\n\n$GGGG_txt_GGGG_feature$"
+    
+    GGGG_mo_modern_uniform_desc:       "Steel helmets combined with uniforms which blend better into the environment help reduce casualties in battle.\n\n$GGGG_txt_GGGG_feature$"
+    
+    # Input good modifier types
+    goods_input_grain_mult:          "$goods_input_grain_add$"
+    goods_input_grain_mult_desc:     "$goods_input_grain_add_desc$"
+    goods_input_meat_mult:           "$goods_input_meat_add$"
+    goods_input_meat_mult_desc:      "$goods_input_meat_add_desc$"
+    goods_input_groceries_mult:      "$goods_input_groceries_add$"
+    goods_input_groceries_mult_desc: "$goods_input_groceries_add_desc$"
+    goods_input_fruit_mult:          "$goods_input_fruit_add$"
+    goods_input_fruit_mult_desc:     "$goods_input_fruit_add_desc$"
+    
+    # Modifiers
+    GGGG_food_throughput_modifier:    "Canned Military Rations"
+    GGGG_fresh_rations_modifier:      "Freshly-Stocked Field Kitchens"
+    GGGG_produce_throughput_modifier: "Incentivized Fresh Produce"
+    GGGG_dress_modifier:              "New Military Dress"
+    GGGG_parade_modifier:             "Patrotic Parade"
+    GGGG_helmets_throughput_modifier: "Modern Uniform Adoption"
+    
+    # Journal entries
+    GGGG_je_canned_goods:                "Canned Military Rations"
+    GGGG_je_canned_goods_reason:         "With the invention of canning as a method to preserve food, military planners are looking to switch to canned goods to add variety to their rations whilst simplifying the food logistics."
+    GGGG_je_refrigerated_produce:        "Refrigerated Military Rations"
+    GGGG_je_refrigerated_produce_reason: "With the invention of refrigeration as a means to preserve food, military logistics leaders are hoping to take advantage of the invention to keep rations more fresh and varied than before."
+    GGGG_je_full_dress:                  "Colorful Military Dress"
+    GGGG_je_full_dress_reason:           "As a result of our new firearms and military doctrine, military leaders are pushing to adopt colorful, highly-visible uniforms to ensure cohesion on the battlefield."
+    GGGG_je_helmets_drab:                "Drab Combat Uniforms"
+    GGGG_je_helmets_drab_reason:         "Battle analyses conclude that the colorful dress of the past has now become obsolete and is actively getting our soldiers wounded and killed. Military leaders are now pushing to adopt more pragmatic uniforms."
+    
+    # Tooltips
+    GGGG_tt_canned_goods_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_canned_rations').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_CANNED_GOODS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_canned_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_refrigerated_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_refrigerated_rations').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_REFRIGERATED_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_refrigerated_rations'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_full_dress_je:   "Current combined usage of [GetMobilizationOption('GGGG_mo_full_dress').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_FULL_DRESS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_full_dress'), '(CFixedPoint)100' )|0]%#!)#!"
+    GGGG_tt_helmets_drab_je: "Current combined usage of [GetMobilizationOption('GGGG_mo_modern_uniform').GetName] across all [Concept('concept_battalion', '$concept_battalions$')] is at least #v [Multiply_CFixedPoint( SCOPE.ScriptValue('GGGG_HELMETS_ADOPTION_THRESHOLD') , '(CFixedPoint)100' )]%#!. #EMP (Currently #v [Multiply_CFixedPoint( SCOPE.sCountry('target_country').MakeScope.ScriptValue('GGGG_sv_mo_usage_helmets_drab'), '(CFixedPoint)100' )|0]%#!)#!"
+    
+    GGGG_tt_no_can_opener_ev: "The #v $technology_events.50.t$#! event will not fire for [SCOPE.sCountry('target_country').GetName]."
+    
+    # Events
+    GGGG_ev_rations_1_title:  "A Canned Success!"
+    GGGG_ev_rations_1_desc:   "The adoption of canned goods to feed our soldiers has significantly improved the shelf life, variety, and quality of our military nutrition."
+    GGGG_ev_rations_1_flavor: ""It may not be my wife's home cooking, but it's better than the dry biscuits and spoiled vegetables. Keeps the cat out of the meats, too.""
+    GGGG_ev_rations_1_a:      "An army marches on its stomach."
+    GGGG_ev_rations_1_b:      "Developing a standardized can opener would be prudent."
+    GGGG_ev_rations_1_c:      "Perhaps we can bring home cooking to the front somehow?"
+    
+    GGGG_ev_rations_2_title:  "Farm-Fresh on the Front"
+    GGGG_ev_rations_2_desc:   "Modern food production and handling technologies have allowed our soldiers to eat fresh produce and goods, even far away from home."
+    GGGG_ev_rations_2_flavor: ""Even from farm to field kitchen, the meals we have taste fresh, as if it were all sourced locally. Sir, it's truly nothing short of revolutionary that the men can eat like this even across continents and oceans!""
+    GGGG_ev_rations_2_a:      "Meals, ready to eat!"
+    GGGG_ev_rations_2_b:      "Everyone deserves to have fresh food everywhere!"
+    GGGG_ev_rations_2_c:      "$GGGG_ev_rations_1_b$"
+    
+    GGGG_ev_uniforms_1_title:  "Trendsetting Army Fashion"
+    GGGG_ev_uniforms_1_desc:   "It appears that our adoption of colorful regimental dresses have garnered the love of the fashion-oriented and the common man."
+    GGGG_ev_uniforms_1_flavor: ""Regardless of class or background, the army'll ought to make a distinguished individual of interest out of you!""
+    GGGG_ev_uniforms_1_a:      "Organize a parade to show patriots the glory that awaits them!"
+    GGGG_ev_uniforms_1_b:      "These uniforms will be the top models of the world!"
+    GGGG_ev_uniforms_1_c:      "Can't we give them something more pragmatic and reasonable?"
+    
+    GGGG_ev_uniforms_2_title:  "The Modern Combat Uniform"
+    GGGG_ev_uniforms_2_desc:   "Field studies are showing that, although less prestigious, the new plain uniforms and steel helmets are effective at reducing casualties."
+    GGGG_ev_uniforms_2_flavor: ""I was hit on the forehead and knocked flying onto the floor of the trench... a shrapnel bullet had hit my helmet with great violence, without piercing it, but sufficiently hard to dent it. If I had, as had been usual up until a few days previously, been wearing a cap, then the Regiment would have had one more man killed.""
+    GGGG_ev_uniforms_2_a:      "We must focus on procuring more of this life-saving equipment."
+    GGGG_ev_uniforms_2_b:      "Modern gear is useless if we don't have equally modern logistics."
+    GGGG_ev_uniforms_2_c:      "If an inch of steel can save a man, could yards save the nation?"
+    GGGG_ev_uniforms_2_d:      "If an inch of steel can stop a bullet, imagine the potential for a beast of machinery clad in it!"
+    

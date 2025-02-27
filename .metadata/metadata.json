@@ -1,8 +1,9 @@
 {
     "name" : "Gas, Guns, Garb, and Grub",
-    "id" : "",
-    "version" : "2.0.6",
-    "supported_game_version" : "1.7.*",
+    "id" : "xyz.1230james.gas_guns_garb_grub",
+    "version" : "2.0.7",
+    "game_id" : "victoria3",
+    "supported_game_version" : "1.*",
     "short_description" : "",
     "tags" : [
         "Events",
