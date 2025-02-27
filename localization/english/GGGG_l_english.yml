@@ -34,7 +34,7 @@
     
     GGGG_mo_rifling_desc:         "\n\nEtched grooves in our gun barrels imparting a spin on the projectile will make our guns more accurate and lethal at farther ranges.\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_breechblocks_desc:    "\n\nReliable breechblocks keep the breech tightly sealed for firing while also allowing our soldiers to load the gun much more quickly through the breech.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_breechblocks_desc:    "\n\nReliable breechblocks will enable the safe and quicker operation of guns that are loaded in the rear instead of down the front end of the barrel.\n\n$GGGG_txt_GGGG_feature$"
     
     GGGG_mo_bolt_actions_desc:    "\n\nWell-designed firearm actions allow a soldier to extract a discharged round and load a new one in a single swift movement by means of a bolt handle.\n\n$GGGG_txt_GGGG_feature$"
     
@@ -59,7 +59,7 @@
     
     GGGG_mo_traditional_uniforms_desc: "Soldiers will be issued plain uniforms, uniforms of more traditional designs, or are required to procure their own.\n\n#bold $GGGG_mo_traditional_uniforms$#! #n cannot#! be removed, but its negative effects may be balanced or canceled out with [GetMobilizationOption('GGGG_mo_full_dress').GetName] and [GetMobilizationOption('GGGG_mo_modern_uniform').GetName].\n\n$GGGG_txt_GGGG_feature$"
     
-    GGGG_mo_full_dress_desc:           "Standardized uniforms make our military more prestigious and serve to help troops identify their allies and act as a cohesive unit more easily.\n\n$GGGG_txt_GGGG_feature$"
+    GGGG_mo_full_dress_desc:           "Standardized uniforms make our military more prestigious and serve to help troops identify their allies and act as a cohesive unit more effectively.\n\n$GGGG_txt_GGGG_feature$"
     
     GGGG_mo_modern_uniform_desc:       "Steel helmets combined with uniforms which blend better into the environment help reduce casualties in battle.\n\n$GGGG_txt_GGGG_feature$"
     
