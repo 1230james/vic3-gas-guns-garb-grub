@@ -179,7 +179,7 @@ GGGG_mo_percussion_caps = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -252,7 +252,7 @@ GGGG_mo_rifling = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -334,7 +334,7 @@ GGGG_mo_breechblocks = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -419,7 +419,7 @@ GGGG_mo_bolt_actions = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
