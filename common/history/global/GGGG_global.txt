@@ -1,4 +1,12 @@
 ﻿GLOBAL = {
+    # Free MO changes period - Allows AI to pick whatever starting MOs they want since otherwise we'd have to overwrite
+    # vanilla military formation histories
+    set_global_variable = {
+        name  = GGGG_free_MOs
+        value = yes
+        days  = 7
+    }
+    
     # Set up JE bypasses
     every_country = {
         # Uniforms
