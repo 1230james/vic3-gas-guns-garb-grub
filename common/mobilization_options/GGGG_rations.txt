@@ -3,7 +3,8 @@
     group   = GGGG_mog_rations
     
     possible = {
-        always = yes
+        # AI keeps using this when they really shouldn't, and I can't seem to get anything working with the ai_weight
+        is_ai = no
     }
     
     upkeep_modifier = {
@@ -12,15 +13,29 @@
     }
     
     unit_modifier = {
-        unit_devastation_mult     = 0.10
-        unit_morale_loss_mult     = 0.25
-        unit_recovery_rate_add    = -0.25
-        unit_morale_recovery_mult = -0.25
-        unit_occupation_mult      = -0.50
+        unit_devastation_mult         = 0.10
+        unit_morale_loss_mult         = 0.25
+        unit_recovery_rate_add        = -0.25
+        unit_morale_recovery_mult     = -0.25
+        unit_occupation_mult          = -0.50
+        unit_convoy_requirements_mult = -0.20
     }
     
     ai_weight = {
-        value = 1
+        value = 0
+        # if = {
+            # limit = {
+                # market ?= {
+                    # mg:grain ?= {
+                        # market_goods_has_goods_shortage = yes
+                    # }
+                    # mg:meat  ?= {
+                        # market_goods_has_goods_shortage = yes
+                    # }
+                # }
+            # }
+            # add = 10
+        # }
     }
 }
 
@@ -42,7 +57,7 @@ GGGG_mo_bread_meat_rations = {
     }
     
     unit_modifier = {
-        dummy_modifier_type = 0
+        # unit_morale_recovery_mult = 0.00001
     }
     
     ai_weight = {
@@ -78,7 +93,9 @@ GGGG_mo_canned_rations = {
     on_activate_while_mobilized = {
         if = { # Allow free changes during first week of game so AI can pick for themselves what they want
             limit = { # b/c otherwise we have to overwrite vanilla military formation histories
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
@@ -91,17 +108,24 @@ GGGG_mo_canned_rations = {
     }
     
     on_deactivate_while_mobilized = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt
-            every_combat_unit = {
-                add_morale = {
-                    value = morale
-                    multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
                 }
             }
-            add_organization = {
-                value = organization
-                multiply = -0.25
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt
+                every_combat_unit = {
+                    add_morale = {
+                        value = morale
+                        multiply = -0.5
+                    }
+                }
+                add_organization = {
+                    value = organization
+                    multiply = -0.25
+                }
             }
         }
     }
@@ -117,11 +141,21 @@ GGGG_mo_canned_rations = {
     }
     
     unit_modifier = {
-        dummy_modifier_type = 0
+        unit_morale_recovery_mult = 0.00001
     }
     
     ai_weight = {
-        value = 1
+        value = 10000
+        if = { # Push AI towards modernizing
+            limit = {
+                market ?= {
+                    mg:groceries ?= {
+                        market_goods_pricier < 0.5
+                    }
+                }
+            }
+            multiply = 2
+        }
     }
 }
 
@@ -149,7 +183,9 @@ GGGG_mo_refrigerated_rations = {
     on_activate_while_mobilized = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
@@ -162,17 +198,24 @@ GGGG_mo_refrigerated_rations = {
     }
     
     on_deactivate_while_mobilized = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt
-            every_combat_unit = {
-                add_morale = {
-                    value = morale
-                    multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
                 }
             }
-            add_organization = {
-                value = organization
-                multiply = -0.25
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt
+                every_combat_unit = {
+                    add_morale = {
+                        value = morale
+                        multiply = -0.5
+                    }
+                }
+                add_organization = {
+                    value = organization
+                    multiply = -0.25
+                }
             }
         }
     }
@@ -193,6 +236,6 @@ GGGG_mo_refrigerated_rations = {
     }
     
     ai_weight = {
-        value = 2
+        value = 20000
     }
 }

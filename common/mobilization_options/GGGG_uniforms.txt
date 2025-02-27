@@ -36,7 +36,9 @@ GGGG_mo_full_dress = {
     on_activate_while_mobilized = {
         if = { # Allow free changes during first week of game so AI can pick for themselves what they want
             limit = { # b/c otherwise we have to overwrite vanilla military formation histories
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
@@ -84,7 +86,9 @@ GGGG_mo_modern_uniform = {
     on_activate_while_mobilized = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
