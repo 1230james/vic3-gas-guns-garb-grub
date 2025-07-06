@@ -41,7 +41,7 @@ technology_events.50 = {
 		add_modifier = {
 			name = modifier_developing_can_opener
 			multiplier = money_amount_multiplier_small
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 
 	}
@@ -52,7 +52,7 @@ technology_events.50 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = modifier_can_anger
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
