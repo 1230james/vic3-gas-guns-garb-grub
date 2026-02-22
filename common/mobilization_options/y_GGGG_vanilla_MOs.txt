@@ -1,6 +1,6 @@
-﻿# Overrides vanilla definitions
+﻿# Overrides vanilla definitions - file prefixed with y to minimise unintended balance changes from miscellaneous INJECTs from other mods.
 
-mobilization_option_basic_supplies = {
+REPLACE:mobilization_option_basic_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/basic_supplies.dds"
 	can_be_turned_off = {
 		custom_tooltip = {
@@ -36,7 +36,7 @@ mobilization_option_basic_supplies = {
 	group = supplies
 }
 
-mobilization_option_extra_supplies = {
+REPLACE:mobilization_option_extra_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/extra_supplies.dds"
 
 	possible = {
@@ -93,7 +93,7 @@ mobilization_option_extra_supplies = {
 	group = supplies
 }
 
-mobilization_option_luxurious_supplies = {
+REPLACE:mobilization_option_luxurious_supplies = {
 	texture = "gfx/interface/icons/mobilization_options/luxurious_supplies.dds"
 
 	possible = {
