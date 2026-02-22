@@ -18,7 +18,7 @@
         unit_recovery_rate_add        = -0.25
         unit_morale_recovery_mult     = -0.25
         unit_occupation_mult          = -0.50
-        unit_convoy_requirements_mult = -0.20
+        # unit_convoy_requirements_mult = -0.20 # Removed in 1.12, sadly no current alternative
     }
     
     ai_weight = {
