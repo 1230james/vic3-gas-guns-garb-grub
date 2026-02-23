@@ -15,6 +15,12 @@
     GGGG_mo_wine:      "$wine$"
     GGGG_mo_wine_desc: "Helps to unwind."
     
+    GGGG_mo_tea:      "$tea$"
+    GGGG_mo_tea_desc: "Helps to calm down."
+    
+    GGGG_mo_coffee:      "$coffee$"
+    GGGG_mo_coffee_desc: "Helps to stay alert."
+    
     # Gun MOs
     # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
     # weird vanilla issue where auto separation of the modifiers list and the description text doesn't happen with the
@@ -72,6 +78,11 @@
     goods_input_groceries_mult_desc: "$goods_input_groceries_add_desc$"
     goods_input_fruit_mult:          "$goods_input_fruit_add$"
     goods_input_fruit_mult_desc:     "$goods_input_fruit_add_desc$"
+    
+    goods_input_tea_add:         "Utilisation de $tea$ @tea!"
+    goods_input_tea_add_desc:    "La quantité de $tea$ @tea! consommée par les bâtiments."
+    goods_input_coffee_add:      "Utilisation de $coffee$ @coffee!"
+    goods_input_coffee_add_desc: "La quantité de $coffee$ @coffee! consommée par les bâtiments."
     
     # Modifiers
     GGGG_food_throughput_modifier:    "Canned Military Rations"
