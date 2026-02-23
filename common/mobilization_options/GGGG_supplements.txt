@@ -21,3 +21,50 @@ GGGG_mo_wine = {
 
 	group = supplements
 }
+
+# By request: tea & coffee supplements
+GGGG_mo_tea = {
+	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+
+	possible = {
+		market ?= {
+			mg:tea ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_tea_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
+
+GGGG_mo_coffee = {
+	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+
+	possible = {
+		market ?= {
+			mg:coffee ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_coffee_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
