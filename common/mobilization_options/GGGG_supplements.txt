@@ -24,7 +24,7 @@ GGGG_mo_wine = {
 
 # By request: tea & coffee supplements
 GGGG_mo_tea = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+	texture = "gfx/interface/icons/production_method_icons/GGGG_tea.dds"
 
 	possible = {
 		market ?= {
@@ -47,7 +47,7 @@ GGGG_mo_tea = {
 }
 
 GGGG_mo_coffee = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+	texture = "gfx/interface/icons/production_method_icons/GGGG_coffee.dds"
 
 	possible = {
 		market ?= {
