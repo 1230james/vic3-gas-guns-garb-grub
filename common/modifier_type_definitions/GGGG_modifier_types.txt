@@ -22,3 +22,15 @@ goods_input_fruit_mult = {
     percent = yes
     decimals = 0
 }
+
+goods_input_tea_add = {
+    color = bad
+    percent = no
+    decimals = 1
+}
+
+goods_input_coffee_add = {
+    color = bad
+    percent = no
+    decimals = 1
+}

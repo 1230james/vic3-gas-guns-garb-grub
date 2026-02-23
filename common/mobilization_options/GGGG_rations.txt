@@ -18,7 +18,7 @@
         unit_recovery_rate_add        = -0.25
         unit_morale_recovery_mult     = -0.25
         unit_occupation_mult          = -0.50
-        unit_convoy_requirements_mult = -0.20
+        # unit_convoy_requirements_mult = -0.20 # Removed in 1.12, sadly no current alternative
     }
     
     ai_weight = {
@@ -141,7 +141,9 @@ GGGG_mo_canned_rations = {
     }
     
     unit_modifier = {
-        unit_morale_recovery_mult = 0.00001
+        # Was here to stop the Basic Supplies description text from appearing
+        # but as of 1.12 at latest, the dropdown where that text appeared is no longer used by the game, so now we don't care
+        # unit_morale_recovery_mult = 0.00001
     }
     
     ai_weight = {
