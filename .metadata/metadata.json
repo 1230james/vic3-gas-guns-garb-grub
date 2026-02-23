@@ -1,12 +1,12 @@
 {
     "name" : "Gas, Guns, Garb, and Grub",
     "id" : "xyz.1230james.gas_guns_garb_grub",
-    "version" : "2.0.9",
+    "version" : "2.0.10",
     "game_id" : "victoria3",
     "supported_game_version" : "1.*",
     "short_description" : "",
     "tags" : [
-        "1.10", "1.11",
+        "1.12",
         "Events",
         "Economy And Buildings",
         "Gameplay",
