@@ -1,0 +1,60 @@
+﻿# Using `materiel_goods` to make sure the oil is added to the maintenance goods cost in full
+
+# However, as of 1.13.8, goods in `materiel_goods` is not listed in the tooltip for a given ship modification, so to
+# signal to the player that there is some oil cost, we will also add them to `construction_goods`. The impact on
+# maintenance goods cost of doubling up like this is very negligible. It should still be deleted if and when it gets
+# fixed, though.
+
+TRY_INJECT:ship_mod_seaplane_tender_guns_light = {
+	construction_goods = {
+        goods_input_oil_add = 1
+    }
+	materiel_goods = {
+        goods_input_oil_add = 1
+    }
+}
+
+TRY_INJECT:ship_mod_seaplane_tender_guns_medium = {
+    construction_goods = {
+        goods_input_oil_add = 2
+    }
+	materiel_goods = {
+        goods_input_oil_add = 2
+    }
+}
+
+TRY_INJECT:ship_mod_seaplane_tender_guns_high = {
+    construction_goods = {
+        goods_input_oil_add = 3
+    }
+	materiel_goods = {
+        goods_input_oil_add = 3
+    }
+}
+
+TRY_INJECT:ship_mod_aircraft_carrier_guns_light = {
+    construction_goods = {
+        goods_input_oil_add = 2
+    }
+	materiel_goods = {
+        goods_input_oil_add = 2
+    }
+}
+
+TRY_INJECT:ship_mod_aircraft_carrier_guns_medium = {
+    construction_goods = {
+        goods_input_oil_add = 4
+    }
+	materiel_goods = {
+        goods_input_oil_add = 4
+    }
+}
+
+TRY_INJECT:ship_mod_aircraft_carrier_guns_high = {
+    construction_goods = {
+        goods_input_oil_add = 5
+    }
+	materiel_goods = {
+        goods_input_oil_add = 5
+    }
+}
