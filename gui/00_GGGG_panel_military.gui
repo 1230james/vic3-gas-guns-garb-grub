@@ -25,7 +25,7 @@ types mobilization_options {
 				using = fade_right_entry_fancy_header_colored
 				color = "[MilitaryFormation.GetCountry.GetMapColor]"
 			}
-			
+
 			flowcontainer = {
 				position = { 12 0 }
 				parentanchor = vcenter
@@ -43,7 +43,7 @@ types mobilization_options {
 					parentanchor = vcenter
 					multiline = yes
 					autoresize = yes
-					text = "[MilitaryFormation.GetName]"
+					text = "[MilitaryFormation.GetNameNoIcon]"
 					align = nobaseline
 					elide = right
 					margin_right = 3
@@ -264,7 +264,7 @@ types mobilization_options {
 
 			flowcontainer = {
 				minimumsize = { 80 -1 }
-				spacing = 10 
+				spacing = 10
 				tooltip = "MILITARY_FORMATION_MORALE_TOOLTIP"
 				parentanchor = vcenter
 
@@ -309,7 +309,7 @@ types mobilization_options {
 				organization_bar = {
 					size = { 6 24 }
 					parentanchor = vcenter
-					
+
 					blockoverride "organization_value" {
 						value = "[FixedPointToFloat( MilitaryFormation.GetOrganizationPercentage )]"
 					}
